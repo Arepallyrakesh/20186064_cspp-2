@@ -22,10 +22,10 @@ public final class Numbercompare {
         int num2 = s.nextInt();
         if (num1 > num2) {
             System.out.println(num1 + " is Bigger than " + num2);
-        } else if (num1 == num2) {
-            System.out.println(num1 + "," + num2 + " are equal");
-        } else {
+        } else if (num1 < num2) {
             System.out.println(num1 + " is Smaller than " + num2);
+        } else {
+            System.out.println(num1 + "," + num2 + " are equal");
         }
     }
 }
