@@ -29,10 +29,10 @@ public final class Solution {
         int count = 0;
         for (int i = 1; i < n; i++ ) {
             int z = i;
-            while(z != 0) {
+            while (z != 0) {
                 int k = z % TEN;
                 z = z / TEN;
-                if (k == SEVEN) {
+                if (k == SEVEN ) {
                     count += 1;
                 }
             }
