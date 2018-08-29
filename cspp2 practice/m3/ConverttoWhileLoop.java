@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- *@author repallyrakesh
+ *@author Arepallyrakesh
  */
 public final class ConverttoWhileLoop {
     /*
