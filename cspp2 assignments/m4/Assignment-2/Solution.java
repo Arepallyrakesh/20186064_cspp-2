@@ -54,7 +54,7 @@ public class Solution {
 	            }
 	            for (int e = 0; e < p; e++) 
 	            {
-	                for (int j = 0; j < n; j++) 
+	                for (int j = 0; j < n - 1; j++) 
 	                {
 	                    System.out.print(sum[e][j]+" ");
 	                }
