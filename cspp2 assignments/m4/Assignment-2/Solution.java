@@ -55,13 +55,12 @@ public class Solution {
 	            String temp = "";
 	            for (int e = 0; e < p; e++) 
 	            {
-	                for (int j = 0; j < n; j++) 
-	                {
+	                for (int j = 0; j < n; j++) {
 	                    temp += sum[e][j] + " ";
 
 	                }
-	                temp += '\n';
 	                temp = temp.trim();
+	                temp += '\n';
             } 
             System.out.println(temp);
         } else {
