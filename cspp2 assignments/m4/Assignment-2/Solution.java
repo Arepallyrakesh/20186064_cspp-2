@@ -47,10 +47,8 @@ public class Solution {
             {
                 for (int j = 0; j < n; j++) 
                 {
-                    for (int k = 0; k < q; k++) 
-                    {
-                        sum[f][j] = a[f][j] + b[f][j];
-                    }
+                    sum[f][j] = a[f][j] + b[f][j];
+                    
                 }
             }
             for (int e = 0; e < p; e++) 
