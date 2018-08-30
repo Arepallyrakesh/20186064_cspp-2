@@ -57,7 +57,7 @@ public class Solution {
                 {
                     System.out.print(sum[e][j]+" ");
                 }
-                System.out.println("");
+                /*System.out.println("");*/
 }
 }
 }
