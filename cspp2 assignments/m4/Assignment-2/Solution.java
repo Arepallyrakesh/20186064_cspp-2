@@ -42,22 +42,26 @@ public class Solution {
                 /*System.out.println("");
 */
 	        }
-	        int sum[][] = new int[m][n];
-        	for (int f = 0; f < p; f++) 
-            {
-                for (int j = 0; j < n; j++) 
-                {
-                    sum[f][j] = a[f][j] + b[f][j];
-                    
-                }
+	        if (p == m && q == n){
+		        int sum[][] = new int[m][n];
+	        	for (int f = 0; f < p; f++) 
+	            {
+	                for (int j = 0; j < n; j++) 
+	                {
+	                    sum[f][j] = a[f][j] + b[f][j];
+	                    
+	                }
+	            }
+	            for (int e = 0; e < p; e++) 
+	            {
+	                for (int j = 0; j < n; j++) 
+	                {
+	                    System.out.print(sum[e][j]+" ");
+	                }
+	                System.out.println("");
+            } 
+        }else {
+            	System.out.println("Addition would not be possible");
             }
-            for (int e = 0; e < p; e++) 
-            {
-                for (int j = 0; j < n; j++) 
-                {
-                    System.out.print(sum[e][j]+" ");
-                }
-                /*System.out.println("");*/
-}
 }
 }
