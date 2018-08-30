@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution{
+public class Solution {
     /*
     Fill this main function to print maximum of given array
     */
@@ -19,7 +19,7 @@ public class Solution{
             for (int i = 1; i < a.length; i++) {
                 if (a[i] > maximum) {
                     maximum = a[i];
-                }
+           }
         } 
         System.out.println(maximum);
     }
