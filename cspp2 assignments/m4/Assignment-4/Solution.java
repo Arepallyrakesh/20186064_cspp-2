@@ -1,17 +1,18 @@
-// Given an String, Write a java method that returns the decimal value for the given binary string.
+// Given an String, Write a java method that returns
+//the decimal value for the given binary string.
 import java.util.Scanner;
 /**
  * @author     Arepallyrakesh.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
    }
-    /*
-    Do not modify the main function 
-    */
+    /**.
+     *Do not modify the main function 
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
