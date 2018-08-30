@@ -14,7 +14,14 @@ public class Solution {
                 {
                     a[i][j] = s.nextInt();
                 }
-        System.out.println(Arrays.toString(a));
+        for (int b = 0; b < p; b++) 
+            {
+                for (int j = 0; j < q; j++) 
+                {
+                    System.out.print(a[b][j]+" ");
+                }
+                System.out.println("");
+            }
 		m = s.nextInt();
 		n = s.nextInt();
         int b[][] = new int[m][n];
@@ -25,8 +32,15 @@ public class Solution {
                     b[c][j] = s.nextInt();
                 }
             }
-        System.out.println(Arrays.toString(a));
+        for (int d = 0; d < m; d++) 
+            {
+                for (int j = 0; j < n; j++) 
+                {
+                    System.out.print(b[d][j]+" ");
+                }
+                System.out.println("");
 
 	}
+}
 }
 }
