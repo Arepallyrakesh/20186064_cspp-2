@@ -8,18 +8,15 @@ public class Solution {
      * Constructs the object.
      */
     private Solution() {
-
    }
     /*
     Do not modify the main function 
     */
-    public static void main(String[] args)
-    {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        String reverse=reverseString(s);
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String reverse = reverseString(s);
         System.out.println(reverse);
-        
     }
     //Write reverseString function
     /**.
@@ -29,7 +26,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static final String reverseString(String s) {
+    public static final String reverseString(final String s) {
         String reverse = "";
         for (int i = s.length() - 1; i >= 0; i--) {
             reverse += s.charAt(i);
