@@ -56,7 +56,7 @@ public class Solution {
 	            {
 	                for (int j = 0; j < n; j++) 
 	                {
-	                    System.out.print(sum[e][j]);
+	                    System.out.print(sum[e][j] - 1 + " ");
 	                }
 	                System.out.println("");
             } 
