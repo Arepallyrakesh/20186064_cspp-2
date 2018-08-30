@@ -19,9 +19,13 @@ public class Solution
 	}
 	public static String binaryToDecimal(final String s) {
 		String temp = "";
-		temp += Integer.parseInt(s, 2);
+		/*temp += Integer.parseInt(s, 2);
 		System.out.println(temp);
-		return temp;
+		return temp;*/
+		int decimalValue = Integer.parseInt(s, 2);
+		temp += decimalValue;
+		return temp; 
+
 	}
 
 }
