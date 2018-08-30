@@ -18,9 +18,9 @@ public class Solution {
             {
                 for (int j = 0; j < q; j++) 
                 {
-                    System.out.print(a[b][j]+" ");
+                   /* System.out.print(a[b][j]+" ");*/
                 }
-                System.out.println("");
+                /*System.out.println("");*/
             }
         }
 		m = s.nextInt();
@@ -37,10 +37,10 @@ public class Solution {
             {
                 for (int j = 0; j < n; j++) 
                 {
-                    System.out.print(b[d][j]+" ");
+                    /*System.out.print(b[d][j]+" ");*/
                 }
-                System.out.println("");
-
+                /*System.out.println("");
+*/
 	        }
 	        int sum[][] = new int[m][n];
         	for (int f = 0; f < p; f++) 
