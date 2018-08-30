@@ -61,7 +61,7 @@ public class Solution {
 	                System.out.println("");
             } 
         }else {
-            	System.out.println("Addition would not be possible");
+            	System.out.println("not possible");
             }
 }
 }
