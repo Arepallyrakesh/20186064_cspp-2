@@ -52,9 +52,9 @@ public class Solution {
 	                    
 	                }
 	            }
-	            for (int e = 0; e < p; e++) 
+	            for (int e = 0; e < p - 1; e++) 
 	            {
-	                for (int j = 0; j < n - 1; j++) 
+	                for (int j = 0; j < n; j++) 
 	                {
 	                    System.out.print(sum[e][j]+" ");
 	                }
