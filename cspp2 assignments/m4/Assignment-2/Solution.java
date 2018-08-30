@@ -60,6 +60,7 @@ public class Solution {
 	                    temp += sum[e][j] + " ";
 
 	                }
+	                temp += '\n';
 	                temp = temp.trim();
             } 
             System.out.println(temp);
