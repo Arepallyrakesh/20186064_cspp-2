@@ -56,10 +56,10 @@ public class Solution {
 	            {
 	                for (int j = 0; j < n; j++) 
 	                {
-	                    System.out.print((sum[e][j] + " ").trim());
+	                    System.out.print(sum[e][j] + " ");
 
 	                }
-	                System.out.println("");
+	                System.out.println("".trim());
             } 
         }else {
             	System.out.println("not possible");
