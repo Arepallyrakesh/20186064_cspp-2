@@ -52,14 +52,15 @@ public class Solution {
 	                    
 	                }
 	            }
+	            String temp = "";
 	            for (int e = 0; e < p; e++) 
 	            {
 	                for (int j = 0; j < n; j++) 
 	                {
-	                    System.out.print(sum[e][j] + " ");
+	                    temp += sum[e][j] + " ";
 
 	                }
-	                System.out.println("".trim());
+	                temp = temp.trim();
             } 
         }else {
             	System.out.println("not possible");
