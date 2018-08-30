@@ -18,8 +18,8 @@ public class Solution
                 if (a[i] > maximum){
                     maximum = a[i];
                 }
-            	System.out.println(maximum);
         } 
+        System.out.println(maximum);
     }
 }
       
