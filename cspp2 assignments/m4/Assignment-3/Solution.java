@@ -18,14 +18,20 @@ public class Solution
 		}
 	}
 	public static String binaryToDecimal(final String s) {
-		String temp = "";
+        /*String temp = "";
 		temp += Integer.parseInt(s, 2);
-		System.out.println(temp);
-		return (String)temp;
-		/*int decimalValue = Integer.parseInt(s, 2);
-		temp += decimalValue;
-		return temp; */
+		/*System.out.println(temp);*/
+		/*return temp;*/
+		double j=0;
+    	for(int i=0;i<s.length();i++) {
+        	if(s.charAt(i)== '1') {
+         		j = j + Math.pow(2,s.length()-1-i);
+         		
+     		}
 
+
+        }
+        return Integer.toString((int)j);
 	}
 
 }
