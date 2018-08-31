@@ -25,14 +25,14 @@ public class Solution
 		/*System.out.println(temp);*/
 		/*return temp;*/
 		double j=0;
-		double dec = 1;
+		
     	for(int i=0;i<s.length();i++) {
         	if(s.charAt(i)== '1') {
-         		dec = j + Math.pow(2,s.length()-1-i);
+         		j = j + Math.pow(2,s.length()-1-i);
          		
      		}
         }
-        return Integer.toString((int)dec);
+        return Integer.toString((int)j);
 	}
 
 }
