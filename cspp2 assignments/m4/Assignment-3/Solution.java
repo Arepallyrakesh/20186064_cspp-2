@@ -24,14 +24,15 @@ public class Solution
 		temp += Integer.parseInt(s, 2);
 		/*System.out.println(temp);*/
 		/*return temp;*/
-		double j=1;
+		double j=0;
+		double dec = 1;
     	for(int i=0;i<s.length();i++) {
         	if(s.charAt(i)== '1') {
-         		j = j * Math.pow(2,s.length()-1-i);
+         		dec = j + Math.pow(2,s.length()-1-i);
          		
      		}
         }
-        return Integer.toString((int)j);
+        return Integer.toString((int)dec);
 	}
 
 }
