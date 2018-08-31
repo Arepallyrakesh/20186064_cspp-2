@@ -10,11 +10,11 @@ public class Solution
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		System.out.println(n);
+		int n = sc.nextInt();	
+		/*System.out.println(n);*/
 		for(int i = 0; i <= n; i++){
 			String s=sc.nextLine();
-			System.out.println(s);
+			/*System.out.println(s);*/
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
@@ -24,10 +24,10 @@ public class Solution
 		temp += Integer.parseInt(s, 2);
 		/*System.out.println(temp);*/
 		/*return temp;*/
-		double j=0;
+		double j=1;
     	for(int i=0;i<s.length();i++) {
         	if(s.charAt(i)== '1') {
-         		j = j + Math.pow(2,s.length()-1-i);
+         		j = j * Math.pow(2,s.length()-1-i);
          		
      		}
         }
