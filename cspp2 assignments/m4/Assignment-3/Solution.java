@@ -39,6 +39,6 @@ public final class Solution {
                 j = j + Math.pow(2, s.length() - 1 - i);
             }
         }
-        return Integer.toString ((int) j);
+        return Integer.toString((int) j);
     }
 }
