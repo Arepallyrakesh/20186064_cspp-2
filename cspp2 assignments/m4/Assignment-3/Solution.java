@@ -12,8 +12,8 @@ public class Solution
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();	
 		/*System.out.println(n);*/
-		for(int i = 0; i <= n; i++){
-			String s=sc.nextLine();
+		for(int i = 0; i < n; i++) {
+			String s=sc.next();
 			/*System.out.println(s);*/
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
@@ -25,7 +25,7 @@ public class Solution
 		temp += Integer.parseInt(s, 2);
 		/*System.out.println(temp);*/
 		/*return temp;*/
-    	for(int i=0; i<s.length(); i++) { 
+    	for(int i = 0; i < s.length(); i++) { 
         	if(s.charAt(i) == '1') {
          		j = j + Math.pow(2,s.length()-1-i);
      		}
