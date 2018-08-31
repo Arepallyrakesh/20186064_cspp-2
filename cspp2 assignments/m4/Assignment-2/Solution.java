@@ -1,70 +1,119 @@
-import java.util.*;
+/**
+ * Sum of two matrices.
+ * @author Arepallyrakesh.
+ */
 import java.util.Scanner;
-public class Solution {
-	/* Fill the main function to print resultant of addition of matrices*/
-	public static void main(String[] args) {
-		int p, q, m, n;
-		Scanner s = new Scanner(System.in);
-		p = s.nextInt();
-		q = s.nextInt();
-		int a[][] = new int[p][q];
-		for (int i = 0; i < p; i++) 
-            {
-                for (int j = 0; j < q; j++) 
-                {
-                    a[i][j] = s.nextInt();
-                }
-        for (int b = 0; b < p; b++) 
-            {
-                for (int j = 0; j < q; j++) 
-                {
-                   /* System.out.print(a[b][j]+" ");*/
-                }
-                /*System.out.println("");*/
+/**
+ * Class.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Empty Constructor.
+    }
+    /* Fill the main function to print resultant of addition of matrices*/
+    /**
+     * Main FUnction.
+     * @param args Argument.
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matrix1 = createMatrix(sc);
+        int[][] matrix2 = createMatrix(sc);
+        int m = getRowSize(matrix1), n = getColumnSize(matrix1);
+        int x = getRowSize(matrix2), y = getColumnSize(matrix2);
+        sc.close();
+        if ((m != x) || (n != y)) {
+            System.out.println("not possible");
+        } else {
+            printMatrix(getAdd(matrix1, matrix2, createMatrix(m, n)));
+        }
+    }
+
+    /**
+     * { function_description }.
+     *
+     * @param      sumMatrix  The sum matrix
+     */
+    public static void printMatrix(final int[][] sumMatrix) {
+        for (int i = 0; i < getRowSize(sumMatrix); i++) {
+            for (int j = 0; j < getColumnSize(sumMatrix) - 1; j++) {
+                System.out.print(sumMatrix[i][j] + " ");
+            }
+           System.out.println(sumMatrix[i][getRowSize(sumMatrix) - 1]);
+        }
+    }
+    /**
+     * Gets the add.
+     *
+     * @param      matrix1    The matrix 1
+     * @param      matrix2    The matrix 2
+     * @param      sumMatrix  The sum matrix
+     *
+     * @return     The add.
+     */
+    public static int[][] getAdd(final int[][] matrix1,
+                                final int[][] matrix2,
+                                final int[][] sumMatrix) {
+        for (int i = 0; i < getRowSize(matrix1); i++) {
+            for (int j = 0; j < getColumnSize(matrix1); j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+           }
+        }
+        return sumMatrix;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      sc    The scanner object     *
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int[][] createMatrix(final Scanner sc) {
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        int[][] arr = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = sc.nextInt();
             }
         }
-		m = s.nextInt();
-		n = s.nextInt();
-        int b[][] = new int[m][n];
-        for (int c = 0; c < m; c++) 
-            {
-                for (int j = 0; j < n; j++) 
-                {
-                    b[c][j] = s.nextInt();
-                }
-            }
-        for (int d = 0; d < m; d++) 
-            {
-                for (int j = 0; j < n; j++) 
-                {
-                    /*System.out.print(b[d][j]+" ");*/
-                }
-                /*System.out.println("");
-*/
-	        }
-	        if (p == m && q == n){
-		        int sum[][] = new int[m][n];
-	        	for (int f = 0; f < p; f++) 
-	            {
-	                for (int j = 0; j < n; j++) 
-	                {
-	                    sum[f][j] = a[f][j] + b[f][j];
-	                    
-	                }
-	            }
-	            String temp = "";
-	            for (int e = 0; e < p; e++) 
-	            {
-	                for (int j = 0; j < n; j++) {
-	                    temp += sum[e][j] + " ";
+        return arr;
+    }
 
-	                }
-	                temp = temp.trim();
-	                temp += '\n';
-            } 
-            System.out.println(temp);
-        } else {
-            	System.out.println("not possible");
-            }
-}
+    /**
+     * Creates a matrix.
+     *
+     * @param      m     { parameter_description }
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int[][] createMatrix(final int m, final int n) {
+        return new int[m][n];
+    }
+
+    /**
+     * Gets the row size.
+     *
+     * @param      array  The array
+     *
+     * @return     The row size.
+     */
+    public static int getRowSize(final int[][] array) {
+        return array.length;
+    }
+    /**
+     * Gets the column size.
+     *
+     * @param      array  The array
+     *
+     * @return     The column size.
+     */
+    public static int getColumnSize(final int[][] array) {
+        return array[0].length;
+    }
+
 }
