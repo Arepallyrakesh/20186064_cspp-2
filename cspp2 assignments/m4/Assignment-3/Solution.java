@@ -1,35 +1,44 @@
-
-// Given an String, Write a java method that returns the decimal value for the given binary string.
-
-
+// Given an String, Write a java method that returns the
+//decimal value for the given binary string.
 import java.util.Scanner;
-public class Solution
-{/*
-	Do not modify this main function.
-	*/
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();	
-		/*System.out.println(n);*/
-		for(int i = 0; i < n; i++) {
-			String s=sc.next();
-			/*System.out.println(s);*/
-			String res=binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
-		}
-	}
-	public static String binaryToDecimal(final String s) {
-		double j = 0;
-        /*String temp = "";
-		temp += Integer.parseInt(s, 2);
-		/*System.out.println(temp);*/
-		/*return temp;*/
-    	for(int i = 0; i < s.length(); i++) { 
-        	if(s.charAt(i) == '1') {
-         		j = j + Math.pow(2,s.length()-1-i);
-     		}
+/**
+ * @author     Arepallyrakesh.
+ */
+public final class Solution {
+     /**
+     * Constructs the object.
+     */
+    private Solution() {
+    }
+    /*
+     * Do not modify this main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final  String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i = 0; i < n; i++) {
+            String s = sc.next();
+            String res = binaryToDecimal(s);//Write binaryToDecimal function
+            System.out.println(res);
         }
-    	return Integer.toString((int)j);
-	}
+    }
+    /**
+     * { function_description }
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static String binaryToDecimal(final String s) {
+        double j = 0;
+        for(int i = 0; i < s.length(); i++) { 
+            if(s.charAt(i) == '1') {
+                j = j + Math.pow(2,s.length()-1-i);
+            }
+        }
+        return Integer.toString((int)j);
+    }
 }
