@@ -27,10 +27,10 @@ final class Solution {
         final char oldChar, final char newChar) {
 	// write your code here
         char[] charArray1 = new char[charArray.length];
-        for (int i = 0; i<charArray.length;i++){
-            if (charArray[i] == oldChar){
+        for (int i = 0 ; i < charArray.length ; i++) {
+            if (charArray[i] == oldChar) {
                 charArray1[i] = newChar;
-            }else{
+            } else {
                 charArray1[i] = charArray[i];
             }
         }
