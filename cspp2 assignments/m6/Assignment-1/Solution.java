@@ -24,9 +24,9 @@ public final class Solution {
         for(int i = 3; i < n; i++){
             if(i % 2 != 1){
                 check = getcomposite(i);
+            }
             if (check > 1){
                 System.out.println(i);
-            }
             }
         }
     }
