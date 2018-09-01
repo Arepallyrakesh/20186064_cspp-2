@@ -33,7 +33,7 @@ final class Solution {
                 s[i][j] = (b+1)*100;
 
             }else{
-                a[i][j] = b *100;
+                s[i][j] = b *100;
             }     
              }
        }
