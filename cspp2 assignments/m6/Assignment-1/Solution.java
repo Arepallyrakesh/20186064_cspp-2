@@ -20,8 +20,8 @@ public final class Solution {
     static void oddComposites(final int n) {
 	// write your code here
         int check = 0;
-        for (int i = 3; i < n; i++){
-            if (i % 2 != 0){
+        for (int i = 3; i < n; i++) {
+            if (i % 2 != 0) {
                 check = getcomposite(i);
                 if (check > 1) {
                     System.out.println(i);
@@ -29,11 +29,18 @@ public final class Solution {
             }
         }
     }
-    public static int getcomposite(int n) {
+    /**
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int getcomposite(final int n) {
         int i = 2;
         int count = 0;
         while (i <= n) {
-            if (n % i == 0){
+            if (n % i == 0) {
                 count = count + 1;
             }
             i = i + 1;
