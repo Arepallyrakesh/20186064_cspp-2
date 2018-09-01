@@ -13,6 +13,14 @@ final class Solution {
         //not used
     }
     /**
+    *@variable HUNDERED variable.
+    */
+    private static final int HUNDERED = 100;
+    /**
+    *@variable FOUR variable.
+    */
+    private static final int FOUR = 49;
+    /**
      * Function to round the
      * elements of a matrix to the nearest 100.
      *
@@ -30,12 +38,12 @@ final class Solution {
 	   int[][] s = new int[rows][columns];
        for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
-            int b =  a[i][j] / 100;
-            if (a[i][j] > (b * 100) + 49) {
-                s[i][j] = (b + 1) * 100;
+            int b =  a[i][j] / HUNDERED;
+            if (a[i][j] > (b * HUNDERED) + FOUR) {
+                s[i][j] = (b + 1) * HUNDERED;
 
             } else {
-                s[i][j] = b * 100;
+                s[i][j] = b * HUNDERED;
             }   
             }
        }
