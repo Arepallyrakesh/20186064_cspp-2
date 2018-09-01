@@ -34,8 +34,8 @@ final class Solution {
                                 final int rows,
                                 final int columns) {
 
-	// write ypur code here
-	   int[][] s = new int[rows][columns];
+    // write ypur code here
+       int[][] s = new int[rows][columns];
        for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             int b =  a[i][j] / HUNDERED;
@@ -44,7 +44,7 @@ final class Solution {
 
             } else {
                 s[i][j] = b * HUNDERED;
-            }   
+            }
             }
        }
        return s;
