@@ -27,17 +27,17 @@ final class Solution {
                                 final int columns) {
 
 	// write ypur code here
-	   int [][] s = new int[rows][columns];
+	   int[][] s = new int[rows][columns];
        for (int i = 0; i < rows; i++) {
-        for(int j = 0; j < columns; j++) {
+        for (int j = 0; j < columns; j++) {
             int b =  a[i][j] / 100;
             if (a[i][j] > (b * 100) + 49) {
                 s[i][j] = (b + 1) * 100;
 
             } else {
                 s[i][j] = b * 100;
-            }     
-             }
+            }   
+            }
        }
        return s;
     }
