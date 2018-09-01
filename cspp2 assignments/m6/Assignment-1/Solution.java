@@ -22,16 +22,19 @@ public final class Solution {
         int[] a = new int[n];
         for (int i = 2; i<n ; i++) {
             if (i % 2 != 0){
+                if ((i/3) % 3 == 0 || (i/5) % 5 == 0){
+                    System.out.println(i);
+                }
 
-    			for (int j = 3; j < 2 ;j++ ) {
+    			// for (int j = 3; j < 2 ;j++ ) {
 
-    				if (i % j == 0){
+    			// 	if (i % 3 == 0){
     		
-    					System.out.println(i);
-    				}else{
-    				}
+    			// 		System.out.println(i);
+    			// 	}else{
+    			// 	}
     				
-    			}
+    			// }
     		}
     		
     	}
