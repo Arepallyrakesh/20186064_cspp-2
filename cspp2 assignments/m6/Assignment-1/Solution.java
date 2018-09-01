@@ -13,14 +13,18 @@ public final class Solution {
         //not used
     }
     /**
+    *@variable FOUR variable.
+    */
+    private static final int THREE = 3;
+    /**
      * Prints the odd composite numbers between 2 and n.
      *
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-	// write your code here
+    // write your code here
         int check = 0;
-        for (int i = 3; i < n; i++) {
+        for (int i = THREE; i < n; i++) {
             if (i % 2 != 0) {
                 check = getcomposite(i);
                 if (check > 1) {
@@ -57,4 +61,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
