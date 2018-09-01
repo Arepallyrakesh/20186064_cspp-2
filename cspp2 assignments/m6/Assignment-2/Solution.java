@@ -30,7 +30,7 @@ final class Solution {
         for(int j =0;i<columns; j++){
             int b =  a[i][j]/100;
             if (a[i][j] > (b*100) + 49 ){
-                s[i][j] = (b+1);
+                s[i][j] = (b+1)*100;
 
             }else{
                 a[i][j] = b *100;
