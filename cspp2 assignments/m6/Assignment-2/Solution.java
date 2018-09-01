@@ -52,7 +52,7 @@ final class Solution {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 a[i][j] = scan.nextInt();
-                System.out.println(a);
+                /*System.out.println(a);*/
             }
         }
         int[][] b = roundHundred(a, m, n);
