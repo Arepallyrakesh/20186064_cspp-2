@@ -6,7 +6,7 @@ class InputValidator {
     /**
      * { var_description }.
      */
-    private String name;
+    private String data;
     /**
     *@variable SIX variable.
     */
@@ -15,13 +15,13 @@ class InputValidator {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      data  The name
      */
     InputValidator(final String name) {
         /**
          * { item_description }.
          */
-        this.name = name;
+        this.data = data;
     }
     /**
      * { function_description }.
@@ -29,7 +29,7 @@ class InputValidator {
      * @return     { description_of_the_return_value }
      */
     boolean validateData() {
-        if (name.length() >= SIX) {
+        if (data.length() >= SIX) {
             return true;
         }
         return false;
