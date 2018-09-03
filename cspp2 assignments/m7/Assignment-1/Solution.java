@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 /**
- * @author : Arepallyrakesh
+ * @author : Arepallyrakesh.
  */
 class InputValidator {
 	/**
@@ -19,24 +19,23 @@ class InputValidator {
    		/**
    		 * { item_description }
    		 */
-    	if (name.length() > 6) {
+    	if (name.length() >= 6) {
     		return true;
-    	}else {
+    	} else {
     		return false;
     	}
     }
 }
-class Solution
-/**
- * { item_description }
- */
-{
+class Solution {
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
     	InputValidator i = new InputValidator(input);    	
     	System.out.println(i.validateData());
-
     }
-
 }
