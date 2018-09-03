@@ -12,6 +12,11 @@ class InputValidator {
     */
     private static final int SIX = 6;
     /*Write the atrributes and methods for InputValidator*/
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
     InputValidator(final String name) {
         /**
          * { item_description }.
@@ -26,8 +31,8 @@ class InputValidator {
     boolean validateData() {
         if (name.length() >= SIX) {
             return true;
-        } 
-        return false;        
+        }
+        return false;
     }
 }
 /**
