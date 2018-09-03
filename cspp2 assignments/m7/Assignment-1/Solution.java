@@ -4,21 +4,22 @@ import java.util.Scanner;
  */
 class InputValidator {
 	/**
-	 * { var_description }
+	 * { var_description }.
 	 */
 	private String name;
-	
 	/*Write the atrributes and methods for InputValidator*/
-	InputValidator(String name) {
+	InputValidator(final String name) {
 		/**
-		 * { item_description }
+		 * { item_description }.
 		 */
 		this.name = name;
     }
-   	boolean validateData(){
-   		/**
-   		 * { item_description }
-   		 */
+   	/**
+   	 * { function_description }.
+   	 *
+   	 * @return     { description_of_the_return_value }
+   	 */
+   	boolean validateData() {
     	if (name.length() >= 6) {
     		return true;
     	} else {
@@ -26,6 +27,9 @@ class InputValidator {
     	}
     }
 }
+/**
+ * Class for solution.
+ */
 class Solution {
 	/**
 	 * { function_description }
