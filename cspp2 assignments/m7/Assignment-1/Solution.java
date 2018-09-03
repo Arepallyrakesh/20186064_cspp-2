@@ -6,7 +6,7 @@ class InputValidator {
     /**
      * { var_description }.
      */
-    private String name;
+    private String na;
     /**
     *@variable SIX variable.
     */
@@ -21,7 +21,7 @@ class InputValidator {
         /**
          * { item_description }.
          */
-        this.name = name;
+        this.na = name;
     }
     /**
      * { function_description }.
@@ -29,7 +29,7 @@ class InputValidator {
      * @return     { description_of_the_return_value }
      */
     boolean validateData() {
-        if (name.length() >= SIX) {
+        if (na.length() >= SIX) {
             return true;
         }
         return false;
@@ -38,7 +38,13 @@ class InputValidator {
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
+    /**
+    * Empty constructor.
+    */
+    private Solution() {
+        //not used
+    }
     /**
      * { function_description }.
      *
