@@ -17,7 +17,7 @@ class InputValidator {
      *
      * @param      name  The name
      */
-    InputValidator(final String data) {
+    InputValidator(final String name) {
         /**
          * { item_description }.
          */
