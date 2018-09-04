@@ -68,6 +68,7 @@ public class List {
      */
     private static final int TEN = 10;
     public List() {
+        
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
