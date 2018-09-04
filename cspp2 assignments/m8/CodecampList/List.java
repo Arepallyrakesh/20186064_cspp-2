@@ -66,6 +66,7 @@ public class List {
     /**
      * . List
      */
+    private static final int TEN = 10;
     public List() {
 
         // what are the two variables to be initialized here?
@@ -78,7 +79,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        this.list = new int[10];
+        this.list = new int[TEN];
         this.size = 0;
 
     }
