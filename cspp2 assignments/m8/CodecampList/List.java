@@ -66,6 +66,9 @@ public class List {
     /**
      *  List.
      */
+    /**
+     * @ variable TEN variable.
+     */
     private static final int TEN = 10;
     public List() {
         // what are the two variables to be initialized here?
