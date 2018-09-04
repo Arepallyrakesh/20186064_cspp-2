@@ -160,7 +160,23 @@ public class List {
         }
         return -1;
     }
+    public int count(int item){
+        int count = 0;
+        for (int i = 0; i<size; i++ ) {
+            if (item == list[i]){
+                count ++;
+            }
+            
+        }
+        return count;
 
+    }
+    public void add(int index, int item){
+
+    }
+    public void addAll(int[] items){
+
+    }
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -256,8 +272,8 @@ public class List {
                 break;
                 case "get":
                 int n = l.get(Integer.parseInt(tokens[1]));
-                if (n != -1){
-                    
+                if (n != -1) {
+                    System.out.println(n);
                 }
                 break;
                 case "contains":
