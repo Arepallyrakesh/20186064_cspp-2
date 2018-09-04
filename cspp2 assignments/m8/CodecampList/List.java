@@ -56,6 +56,10 @@ public class List {
      *
      */
     private int size;
+    /**
+     * @ variable TEN variable.
+     */
+    private static final int TEN = 10;
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
@@ -66,11 +70,8 @@ public class List {
     /**
      *  List.
      */
-    /**
-     * @ variable TEN variable.
-     */
-    private static final int TEN = 10;
     public List() {
+        
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
