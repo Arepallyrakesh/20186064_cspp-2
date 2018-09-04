@@ -64,7 +64,7 @@ public class List {
      * some default values.
      */
     /**
-     *  List
+     *  List.
      */
     private static final int TEN = 10;
     public List() {
