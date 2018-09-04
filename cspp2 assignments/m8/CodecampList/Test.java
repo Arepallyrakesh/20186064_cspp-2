@@ -174,7 +174,7 @@ public class List {
     public void add(int index, int item){
 
     }
-    public void addAll(int[] items){
+    public void addAll(int[] item){
 
     }
     /*

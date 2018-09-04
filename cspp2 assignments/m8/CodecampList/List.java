@@ -257,7 +257,7 @@ public class List {
                 case "get":
                 int n = l.get(Integer.parseInt(tokens[1]));
                 if (n != -1){
-                    
+                    System.out.println(n);
                 }
                 break;
                 case "contains":
