@@ -5,10 +5,8 @@ import java.util.Scanner;
  * List Class.
  */
 public class List {
-    
-	//Implement all the methods mentioned to build a ListADT
-
-    /*
+    //Implement all the methods mentioned to build a ListADT
+    /**.
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
