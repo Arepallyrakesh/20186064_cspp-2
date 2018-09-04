@@ -71,7 +71,6 @@ public class List {
      *  List.
      */
     public List() {
-        
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
