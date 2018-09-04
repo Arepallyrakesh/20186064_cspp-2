@@ -62,6 +62,9 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * . List
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -78,7 +81,6 @@ public class List {
         this.size = 0;
 
     }
-    
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -130,7 +132,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-        for (int i = index; i < size-1; i++ ) {
+        for (int i = index; i < size - 1; i++) {
             list[i] = list[i + 1];
         }
         size--;
@@ -153,7 +155,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
             return list[index];
@@ -184,7 +186,7 @@ public class List {
         }
         return str + list[size - 1] + "]";
     }
-    /**
+    /**.
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
@@ -219,7 +221,7 @@ public class List {
         return -1;
     }
 
-	/**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
