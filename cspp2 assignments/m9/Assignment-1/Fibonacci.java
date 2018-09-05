@@ -33,13 +33,13 @@ public class Fibonacci
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      n     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         // todo - complete this method
         List fibonacci = new List(n);
         int n1 = 0;
