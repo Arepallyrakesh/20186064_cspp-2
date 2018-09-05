@@ -78,6 +78,10 @@ public class List {
         // That is the initial value to use for size.
         size = 0;
     }
+    public List(int n) {
+        list = new int[n];
+        size = 0;
+    }
 
     /*
      * Overloaded constructor with list capacity as argument
@@ -93,10 +97,7 @@ public class List {
      * constructor.
      * 
      */
-
-    // todo - add an overloaded constructor here
-
-    
+    // todo - add an overloaded constructor here    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
