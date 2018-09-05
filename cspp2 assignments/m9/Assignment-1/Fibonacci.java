@@ -19,8 +19,7 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public class Fibonacci
-{   
+public class Fibonacci {
     /**
      * Constructs the object.
      */
@@ -50,11 +49,11 @@ public class Fibonacci
         int sum = 0;
         fibonacci.add(n1);
         fibonacci.add(n2);
-        for (int i = 2; i < n; i++ ) {
+        for (int i = 2; i < n; i++) {
             sum = n1 + n2;
             fibonacci.add(sum);
             n1 = n2;
-            n2 = sum;   
+            n2 = sum;
         }
         return fibonacci;
     }
