@@ -22,7 +22,7 @@ import java.util.Scanner;
 public class Fibonacci
 {
     private Fibonacci() {
-        
+
     }
     /*
      * fib is a static method takes a argument n
@@ -51,18 +51,17 @@ public class Fibonacci
             sum = n1 + n2;
             fibonacci.add(sum);
             n1 = n2;
-            n2 = sum;
-            
+            n2 = sum;   
         }
         return fibonacci;
     }
 
-	/**
-     * { function_description }
+    /**
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
