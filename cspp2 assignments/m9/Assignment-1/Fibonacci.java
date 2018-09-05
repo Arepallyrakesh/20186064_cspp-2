@@ -38,7 +38,7 @@ public class Fibonacci
      */
     public static List fib(int n) {
         // todo - complete this method
-        List fibonacci = new List();
+        List fibonacci = new List(n);
         int n1 = 0;
         int n2 = 1;
         int sum = 0;
