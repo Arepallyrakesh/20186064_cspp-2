@@ -78,9 +78,9 @@ public class List {
         // That is the initial value to use for size.
         size = 0;
     }
-        public List(int n) {
-            list = new int[n];
-            size = 0;
+    public List(int n) {
+    list = new int[n];
+    size = 0;
     }
 
     /*
