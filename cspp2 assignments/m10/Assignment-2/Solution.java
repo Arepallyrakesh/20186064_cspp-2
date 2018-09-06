@@ -3,9 +3,13 @@ import java.util.Scanner;
 
 /**
  * Class for solution.
- * @author : Arepallyrakesh
+ * @author     : Arepallyrakesh
  */
-class Solution {
+public class Solution {
+
+    private Solution() {
+        // empty constructor.
+    }
     /**
      * main function.
      *
