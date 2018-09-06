@@ -58,7 +58,9 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-    /*
+    private static final int TEN =10;
+
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -72,7 +74,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[TEN];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
