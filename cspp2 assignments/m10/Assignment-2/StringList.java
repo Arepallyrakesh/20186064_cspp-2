@@ -269,8 +269,9 @@ public class StringList implements StringListInterface{
      */
     public int indexOf(String item) {
         for(int i = 0; i < size; i++) {
-            if(item == list[i])
+            if(item.equals(list[i])) {
                 return i;
+            }
         }
         return -1;
     }
