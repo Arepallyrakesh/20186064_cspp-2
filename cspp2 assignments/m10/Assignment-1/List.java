@@ -6,7 +6,7 @@ import java.util.Arrays;
  *@author : Arepallyrakesh.
  */
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -253,7 +253,7 @@ public class List {
         }
     }
 
-    /*
+    /**
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -294,7 +294,7 @@ public class List {
         return str;
     }
     
-    /*
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
@@ -312,7 +312,7 @@ public class List {
         return indexOf(item) == -1;
     }
 
-    /*
+    /**
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
@@ -324,15 +324,18 @@ public class List {
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
-    array to the end of list*/
-    public void addAll(final int[] items)
-    {
+   /**
+    Inserts all the elements of specified int array to the end of list
+   
+    @param      items  The items
+   */
+    public void addAll(final int[] items) {
+
         // write the logic
         int a = items.length;
         int in = 0;
-        if ((size + a) <= list.length){
-            for (int j = size; j<(size + a); j++) {
+        if ((size + a) <= list.length) {
+            for (int j = size; j < (size + a); j++) {
                 list[j] = items[in];
                 in += 1;
             }
@@ -344,12 +347,12 @@ public class List {
         }
     }
 
-     /* 
-        Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+     /**
+        Inserts the specified element at the specified index
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(final int index , final int item) {
+    public void add(final int index, final int item) {
          // write the logic
         if (index >= 0 && size < list.length) {
             for (int j = size - 1; j >= index; j--) {
@@ -361,12 +364,18 @@ public class List {
             System.out.println("Negative Index Exception");
         } else {
             System.out.println("List is full");
-        } 
+        }
     }
-    
-    /* Returns the count of occurances of a given item in the list*/
+    /**
+     * Returns the count of occurances of a given item in the list
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
-         // write the logic 
+
+         // write the logic
         int count = 0;
         for (int j = 0; j < size; j++) {
             if (list[j] == item) {
@@ -376,7 +385,7 @@ public class List {
     }
 
 
-	/**
+    /**
      * { function_description }.
      *
      * @param      args  The arguments
@@ -401,8 +410,8 @@ public class List {
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    if (t.length > 1){
-                        l.add(Integer.parseInt(t[0]) , Integer.parseInt(t[1]));
+                    if (t.length > 1) {
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
@@ -414,7 +423,7 @@ public class List {
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int[] temp = new int[t1.length];
-                for (int i = 0;i < temp.length; i++) {
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
                 l.addAll(temp);
@@ -447,5 +456,5 @@ public class List {
                 default :
             }
         }
-	}
+    }
 }
