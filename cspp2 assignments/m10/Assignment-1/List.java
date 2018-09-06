@@ -112,19 +112,16 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        if (size < list.length) {
-            list[size++] = item;   
-        } else {
-            resize();
-        }   
+        list[size++] = item;
     }
     /**
      * { function_description }
      *
      * @param      item  The item
      */
-    private void resize() {
+    private void resize(final int item) {
         this.list = Arrays.copyOf(this.list, list.length*2);
+        list[size++] = item;
     }
 
     /*
@@ -283,12 +280,19 @@ public class List {
     public void addAll(int items[])
     {
         // write the logic
-        if (items.length + size() >= list.length) {
-            resize();
+        int a = items.length;
+        int in = 0;
+        if ((size + a) <= list.length){
+            for (int j = size; j<(size + a); j++) {
+                list[j] = items[in];
+                in += 1;
+            }
+            size += a;
+        } else {
+            for (int i = 0; i < a; i++) {
+                resize(items[i]);
+            }
         }
-        for (int i = 0; i < items.length; i++) {
-            add(items[i]);
-        } 
     }
 
      /* 
@@ -297,14 +301,30 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-         // write the logic 
+         // write the logic
+        if (index >= 0 && size < list.length) {
+            for (int j = size - 1; j >= index; j--) {
+                list[j + 1] = list[j];
+            }
+            list[index] = item;
+            size += 1;
+        } else if (index < 0) {
+            System.out.println("Negative Index Exception");
+        } else {
+            System.out.println("List is full");
+        } 
     }
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
     {
          // write the logic 
-        return 0;
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if (list[j] == item) {
+                count += 1;
+            }
+        } return count;
     }
 
 
