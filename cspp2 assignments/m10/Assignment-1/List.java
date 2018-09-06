@@ -29,10 +29,10 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+
     private int[] list;
 
     /*
@@ -54,12 +54,10 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -107,7 +105,7 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -179,6 +177,12 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
+
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
@@ -204,6 +208,11 @@ public class List {
      * The method returns void (nothing)
      */
 
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -227,6 +236,14 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(int index) {
         if(index < 0 || index >= size) {
@@ -256,6 +273,12 @@ public class List {
      * not all the elements of the array.
      *
      */
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if(size == 0)
             return "[]";
@@ -276,6 +299,14 @@ public class List {
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     */
+
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public boolean contains(int item) {
         return indexOf(item) == -1;
@@ -361,13 +392,12 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if ((tokens.length)==2) {
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if (t.length==1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
-                    if(t.length>1)
+                } else {
+                    if (t.length>1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
                 }
@@ -376,10 +406,10 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if (tokens.length==2) {
                 String[] t1 = tokens[1].split(",");
                 int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
+                for (int i=0;i<temp.length;i++)
                     temp[i]=Integer.parseInt(t1[i]);
                 l.addAll(temp);
                 }
@@ -408,6 +438,7 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default :
             }
         }
 	}
