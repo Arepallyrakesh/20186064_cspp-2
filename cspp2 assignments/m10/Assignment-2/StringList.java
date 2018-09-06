@@ -268,11 +268,12 @@ public class StringList implements StringListInterface{
      * or -1 if this list does not contain the element.
      */
     public int indexOf(String item) {
-        for(int i = 0; i < size; i++) {
+        int i;
+        for(i = 0; i < size; i++) {
             if(item.equals(list[i])) {
-                return i;
+                return -1;
             }
         }
-        return -1;
+        return i;
     }
 }
