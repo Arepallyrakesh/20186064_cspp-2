@@ -110,6 +110,10 @@ public class StringList implements StringListInterface{
         size = 0;
         list = new String[n];
     }
+    private void resize(final String item) {
+        list = Arrays.copyOf(list, size+2);
+        list[size++] = item;
+    }
     
     /*
      * The add method does what the name suggests.
@@ -124,7 +128,11 @@ public class StringList implements StringListInterface{
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
-        list[size++] = item;
+        if (size < list.length + 1) {
+            list[size++] = item;
+        } else {
+            resize(item);
+        }
        
     }
     /*Inserts all the elements of specified int 
@@ -155,11 +163,6 @@ public class StringList implements StringListInterface{
      */
     public int size() {
         return size;
-    }
-
-    private void resize(final String item) {
-        list = Arrays.copyOf(list, size + 2);
-        list[size++] = item;
     }
     /*
      * The remove method does what the name suggests.
@@ -257,10 +260,7 @@ public class StringList implements StringListInterface{
     public boolean contains(String item) {
         return indexOf(item) == -1;
     }
-    private void resize(final int item) {
-        this.list = Arrays.copyOf(this.list, list.length*2);
-       
-    }
+
 
     /*
      * Returns the index of the first occurrence 
