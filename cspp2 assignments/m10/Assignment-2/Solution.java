@@ -7,6 +7,9 @@ import java.util.Scanner;
  */
 public class Solution {
 
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         // empty constructor.
     }
