@@ -106,7 +106,10 @@ public class StringList implements StringListInterface{
      */
 
     // todo - add an overloaded constructor here
-
+    public void ListString(final int n) {
+        size = 0;
+        list = new String[n];
+    }
     
     /*
      * The add method does what the name suggests.
@@ -154,6 +157,10 @@ public class StringList implements StringListInterface{
         return size;
     }
 
+    private void resize(final String item) {
+        list = Arrays.copyOf(list, size + 2);
+        list[size++] = item;
+    }
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
@@ -201,7 +208,7 @@ public class StringList implements StringListInterface{
      */
     public String get(int index) {
         if(index < 0 || index >= size) {
-            return "";
+            return "-1";
         } else {
             return list[index];
         }
@@ -237,9 +244,6 @@ public class StringList implements StringListInterface{
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if (list[0].equals(0)) {
-                str += "\nInvalid Position Exception";
-            }
         return str;
        
     }
