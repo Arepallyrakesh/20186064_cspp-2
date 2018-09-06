@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Class for solution.
  * @author : Arepallyrakesh
  */
-public class Solution {
+class Solution {
     /**
      * main function.
      *
