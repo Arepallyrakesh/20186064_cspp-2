@@ -313,20 +313,23 @@ public class List {
     }
 
     /**
-     * Returns the index of the first occurrence 
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
+     * Returns the index of the first occurrence of the specified element in
+     * this list, or -1 if this list does not contain the element.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
     }
    /**
-    Inserts all the elements of specified int array to the end of list
-   
+    Inserts all the elements of specified int array to the end of list.
     @param      items  The items
    */
     public void addAll(final int[] items) {
@@ -348,11 +351,14 @@ public class List {
     }
 
      /**
-        Inserts the specified element at the specified index
-    by moving all the elements to the right.
-        The method returns void (nothing)
+      Inserts the specified element at the specified index by moving all the
+      elements to the right. The method returns void (nothing)
+     
+      @param      index  The index
+      @param      item   The item
      */
     public void add(final int index, final int item) {
+
          // write the logic
         if (index >= 0 && size < list.length) {
             for (int j = size - 1; j >= index; j--) {
@@ -367,7 +373,7 @@ public class List {
         }
     }
     /**
-     * Returns the count of occurances of a given item in the list
+     * Returns the count of occurances of a given item in the list.
      *
      * @param      item  The item
      *
