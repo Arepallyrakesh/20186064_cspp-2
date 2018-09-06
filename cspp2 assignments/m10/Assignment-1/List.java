@@ -35,7 +35,7 @@ public class List {
 
     private int[] list;
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -52,13 +52,16 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-    private static final int TEN =10;
+    /**
+     * @ variable TEN Variable
+     */
+
+    private static final int TEN = 10;
 
     /**
      * The purpose of the constructor is to initialize the
@@ -90,7 +93,7 @@ public class List {
      * raises a Index Out of Bounds Exception
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
-     * at the time of creating the list. 
+     * at the time of creating the list.
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
@@ -278,7 +281,7 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0){
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
