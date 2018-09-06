@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -34,6 +34,7 @@ public class List {
     // that's the job of the List constructor
 
     private int[] list;
+
 
     /**
      * What are the other class variables needed for creating a list?
@@ -465,3 +466,5 @@ public class List {
         }
     }
 }
+
+
