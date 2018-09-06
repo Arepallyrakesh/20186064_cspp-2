@@ -2,6 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ *@author : Arepallyrakesh.
+ */
 public class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -61,9 +64,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -94,6 +97,12 @@ public class List {
      * constructor.
      * 
      */
+
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -109,6 +118,12 @@ public class List {
      * to the list.
      * 
      * The method returns void (nothing)
+     */
+
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
