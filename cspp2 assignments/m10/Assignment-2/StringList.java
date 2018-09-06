@@ -257,6 +257,10 @@ public class StringList implements StringListInterface{
     public boolean contains(String item) {
         return indexOf(item) == -1;
     }
+    private void resize(final int item) {
+        this.list = Arrays.copyOf(this.list, list.length*2);
+       
+    }
 
     /*
      * Returns the index of the first occurrence 
