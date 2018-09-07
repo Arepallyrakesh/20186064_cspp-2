@@ -183,7 +183,11 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return indexOf(item) == -1;
+        /*return indexOf(item) == -1;*/
+        if (indexOf(item) >= 0) {
+            return true;
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
