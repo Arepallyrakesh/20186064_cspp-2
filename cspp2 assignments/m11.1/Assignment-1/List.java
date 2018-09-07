@@ -66,7 +66,7 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-    	list = new int[20];
+    	list =new int[20];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -82,9 +82,9 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(int item){
         //Inserts the specified element at the end of the list.
-        list[size++] = item;
+        list[size++] =item;
     }
 
     /*
@@ -276,9 +276,13 @@ public class List {
 		/*System.out.println("Index Out of Bounds Exception");*/
 		return null;
 }
-    /*
-    Returns a boolean indicating whether the parameter i.e a List object is
+    /**
+    Returns a boolean indicating whether the parameter i.e a List object is.
     exactly matching with the given list or not.
+    
+    @param      newlist  The newlist
+    
+    @return     { description_of_the_return_value }
     */
     public boolean equals(List newlist) {
     // Replace the code below
@@ -291,8 +295,8 @@ public class List {
     	return (j == list.size());*/
        /* return list.tostring().equals(this.tostring());*/
         int j = 0;
-        for (int i = 0; i < size(); i++) {
-            if (list[i] == newlist.get(j)) {
+        for (int i = 0; i <size(); i++) {
+            if (list[i] ==newlist.get(j)) {
                 j++;
                 if (j == size()) {
                     return true;
