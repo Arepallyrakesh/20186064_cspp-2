@@ -230,7 +230,12 @@ public class List {
      {
         // write the logic       
         for (int i = 0; i < newArray.length; i++) {
-        	remove(newArray.length);
+        	for (int j = 0; j < this.size(); j++) {
+        		if(newArray[i] == list[j]) {
+        			remove(j);
+        		}
+        		
+        	}
         }
     }
     /*
