@@ -66,7 +66,7 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-    	list =new int[20];
+        list =new int[20];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -205,7 +205,7 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list    
     */
-    public void addAll(int[] newArray)
+    public void addAll(final int[] newArray)
     {
         // write the logic
         int a = newArray.length;
@@ -226,29 +226,26 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] newArray)
-     {
-        // write the logic       
+     public void removeAll(int[] newArray) {
+        // write the logic
        /* for (int i = 0; i < newArray.length; i++) {
-        	for (int j = 0; j < this.size(); j++) {
-        		if(newArray[i] == list[j]) {
-        			remove(j);
-        		}
-        		
-        	}
+            for (int j = 0; j < this.size(); j++) {
+                if(newArray[i] == list[j]) {
+                    remove(j);
+                }
+            }
         }*/
         int j = 0;
-        for (int i = 0; i < newArray.length; i++ ) {
+        for (int i = 0; i < newArray.length; i++) {
             j = 0;
             while (j < size()) {
                 if (newArray[i] == get(j)) {
                     remove(j);
-                    j -= 1;
-                    
+                    j -= 1;       
                 } else {
                     j += 1;
                 }
-            }  
+            }
         }
     }
     /**
@@ -264,20 +261,20 @@ public class List {
     public List subList(final int start, final int end) {
 
     // write the logic for subList
-    	List newlist = new List();
-    	if (start >= -1) {
-    		if (start == end  || start == end - 1
-    			|| start > end || start == -1) {
-    			System.out.println("Index Out of Bounds Exception");
-	    	} else {
-	    		for (int i = start; i < end; i++) {
-	    			newlist.add(list[i]);
-	    		}
-    			return newlist;
-    		}
-    	}
-		/*System.out.println("Index Out of Bounds Exception");*/
-		return null;
+        List newlist = new List();
+        if (start >= -1) {
+            if (start == end  || start == end - 1
+                || start > end || start == -1) {
+                System.out.println("Index Out of Bounds Exception");
+            } else {
+                for (int i = start; i < end; i++) {
+                    newlist.add(list[i]);
+                }
+                return newlist;
+            }
+        }
+        /*System.out.println("Index Out of Bounds Exception");*/
+        return null;
 }
     /**
     Returns a boolean indicating whether the parameter i.e a List object is.
@@ -287,13 +284,13 @@ public class List {
     */
     public boolean equals(final List newlist) {
     // Replace the code below
-/*    	int j = 0;
-    	for (int i = 0; i < list.size(); i++ ) {
-    		if (contains(list.get(j))) {
-    			j++;
-    		}
-    	}
-    	return (j == list.size());*/
+/*      int j = 0;
+        for (int i = 0; i < list.size(); i++ ) {
+            if (contains(list.get(j))) {
+                j++;
+            }
+        }
+        return (j == list.size());*/
        /* return list.tostring().equals(this.tostring());*/
         int j = 0;
         for (int i = 0; i < size(); i++) {
@@ -316,7 +313,7 @@ public class List {
     public void clear() {
 
     // write the logic for clear.
-    	size = 0;
+        size = 0;
     }
 
     /**
