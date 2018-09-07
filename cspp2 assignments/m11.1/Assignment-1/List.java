@@ -241,7 +241,7 @@ public class List {
         for (int i = 0; i < newArray.length; i++ ) {
             j = 0;
             while (j < size()) {
-                if (newArray[i] == this.get(j)) {
+                if (newArray[i] == get(j)) {
                     remove(j);
                     j -= 1;
                     
