@@ -123,7 +123,7 @@ public class List {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            System.out.print(index);
+            System.out.print(size);
             size--;
         } /*else {
             System.out.println("Invalid Position Exception");
