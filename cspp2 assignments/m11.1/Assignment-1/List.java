@@ -296,7 +296,7 @@ public class List {
        /* return list.tostring().equals(this.tostring());*/
         int j = 0;
         for (int i = 0; i <size(); i++) {
-            if (list[i] ==newlist.get(j)) {
+            if (list[i] == newlist.get(j)) {
                 j++;
                 if (j == size()) {
                     return true;
@@ -308,18 +308,23 @@ public class List {
         return false;
     }
 
-    /*
-    * Removes all the elements from list
-    * Think about this case and make the method
-    * the simpler.
-    */
-    public void clear()
-    {
+    /**
+     * Removes all the elements from list Think about this case and make the
+     * method the simpler.
+     */
+    public void clear() {
+
     // write the logic for clear.
     	size = 0;
     }
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -334,7 +339,7 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
