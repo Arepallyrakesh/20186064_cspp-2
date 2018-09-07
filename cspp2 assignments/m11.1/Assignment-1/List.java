@@ -241,7 +241,7 @@ public class List {
             while (j < size()) {
                 if (newArray[i] == get(j)) {
                     remove(j);
-                    j -= 1;       
+                    j -= 1;
                 } else {
                     j += 1;
                 }
