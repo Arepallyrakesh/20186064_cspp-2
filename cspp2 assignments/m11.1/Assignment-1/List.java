@@ -277,13 +277,14 @@ public class List {
 		return null;
 }
     /**
-    *Returns a boolean indicating whether the parameter i.e a List object is.
-    *exactly matching with the given list or not.
+    Returns a boolean indicating whether the parameter i.e a List object is.
+    exactly matching with the given list or not.
     
-    *@param      newlist  The newlist
-    *@return     { description_of_the_return_value }
+    @param      newlist  The newlist
+    
+    @return     { description_of_the_return_value }
     */
-    public boolean equals(final List newlist) {
+    public boolean equals(List newlist) {
     // Replace the code below
 /*    	int j = 0;
     	for (int i = 0; i < list.size(); i++ ) {
@@ -294,8 +295,8 @@ public class List {
     	return (j == list.size());*/
        /* return list.tostring().equals(this.tostring());*/
         int j = 0;
-        for (int i = 0; i < size(); i++) {
-            if (list[i] == newlist.get(j)) {
+        for (int i = 0; i <size(); i++) {
+            if (list[i] ==newlist.get(j)) {
                 j++;
                 if (j == size()) {
                     return true;
@@ -307,23 +308,18 @@ public class List {
         return false;
     }
 
-    /**
-     * Removes all the elements from list Think about this case and make the
-     * method the simpler.
-     */
-    public void clear() {
-
+    /*
+    * Removes all the elements from list
+    * Think about this case and make the method
+    * the simpler.
+    */
+    public void clear()
+    {
     // write the logic for clear.
     	size = 0;
     }
 
-    /**
-     * { function_description }
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -338,7 +334,7 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2) {
+                    if (tokens.length == 2){
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -378,8 +374,8 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
-                        for (int i = 0; i < temp.length; i++) {
-                            temp[i] = Integer.parseInt(t1[i]);
+                        for(int i = 0; i < temp.length; i++) {
+                            temp[i]=Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -388,15 +384,13 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++) {
+                        for(int i = 0; i < t2.length; i++)
                             a[i] = Integer.parseInt(t2[i]);
-                        }
                         l.removeAll(a);
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) 
-                    	break;
+                    if (tokens.length != 2) break;
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
