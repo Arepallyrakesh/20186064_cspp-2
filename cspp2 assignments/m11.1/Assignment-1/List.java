@@ -229,13 +229,27 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic       
-        for (int i = 0; i < newArray.length; i++) {
+       /* for (int i = 0; i < newArray.length; i++) {
         	for (int j = 0; j < this.size(); j++) {
         		if(newArray[i] == list[j]) {
         			remove(j);
         		}
         		
         	}
+        }*/
+        int j = 0;
+        for (int i = 0; i < newArray.length; i++ ) {
+            j = 0;
+            while (j < size()) {
+                if (newArray[i] == this.get(j)) {
+                    remove(j);
+                    j -= 1;
+                    
+                } else {
+                    j += 1;
+                }
+            }
+            
         }
     }
     /*
@@ -266,15 +280,28 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list) {
+    public boolean equals(List newlist) {
     // Replace the code below
-    	int j = 0;
+/*    	int j = 0;
     	for (int i = 0; i < list.size(); i++ ) {
     		if (contains(list.get(j))) {
     			j++;
     		}
     	}
-    	return (j == list.size());
+    	return (j == list.size());*/
+       /* return list.tostring().equals(this.tostring());*/
+        int j = 0;
+        for (int i = 0; i < size(); i++) {
+            if (list[i] == newlist.get(j)) {
+                j++;
+                if (j == size()) {
+                    return true;
+                }
+            } else {
+                j = 0;
+            }
+        }
+        return false;
     }
 
     /*
