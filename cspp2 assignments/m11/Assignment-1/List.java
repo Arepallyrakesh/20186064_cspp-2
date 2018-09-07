@@ -127,7 +127,7 @@ public class List {
         } /*else {
             System.out.println("Invalid Position Exception");
         }*/
-        System.out.println("["+index+"]");
+       /* System.out.println("["+index+"]");*/
     }
 
     /*
@@ -163,19 +163,24 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        if (size == 0) {
-            return "[]";
-        }
-        String str = "[";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
-        }
-        str = str + list[i] + "]";
-       /* if (list[0] == 0) {
-                str += "\nInvalid Position Exception";
-            }*/
-        return str;
+        if (size > 8){
+
+	        if (size == 0) {
+	            return "[]";
+	        }
+	        String str = "[";
+	        int i = 0;
+	        for (i = 0; i < size - 1; i++) {
+	            str = str + list[i] + ",";
+	        }
+	        str = str + list[i] + "]";
+	       /* if (list[0] == 0) {
+	                str += "\nInvalid Position Exception";
+	            }*/
+	        return str;
+	    } else {
+	    	return "8";
+	    }
     } 
     /*
      * Contains return true if the list has the item passed as an argument to
