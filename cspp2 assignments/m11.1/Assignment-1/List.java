@@ -250,8 +250,8 @@ public class List {
     // write the logic for subList
     	List newlist = new List();
     	if (start >= 0 && start <= end) {
-    		if (start == end) {
-    			return new List();
+    		if (start == end  && start == end - 1  && start >= end) {
+    			System.out.println("Index Out of Bounds Exception");
 	    	} else {
 	    		for (int i = start; i < end ; i++) {
 	    			newlist.add(list[i]);
