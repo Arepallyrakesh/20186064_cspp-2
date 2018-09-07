@@ -248,8 +248,7 @@ public class List {
                 } else {
                     j += 1;
                 }
-            }
-            
+            }  
         }
     }
     /**
@@ -258,10 +257,8 @@ public class List {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-    
     @param      start  The start.
     @param      end    The end
-    
     @return     { description_of_the_return_value }
     */
     public List subList(final int start, final int end) {
@@ -269,7 +266,7 @@ public class List {
     // write the logic for subList
     	List newlist = new List();
     	if (start >= -1) {
-    		if (start == end  || start == end - 1 
+    		if (start == end  || start == end - 1
     			|| start > end || start == -1) {
     			System.out.println("Index Out of Bounds Exception");
 	    	} else {
