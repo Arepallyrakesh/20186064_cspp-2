@@ -247,11 +247,13 @@ public class List {
     public boolean equals(List list) 
     {
     // Replace the code below
-/*    	int j = 0;
-    	for (int  i = 0; i <  ; ) {
-    		
-    	}*/
-    return true;
+    	int j = 0;
+    	for (int i = 0; i < list.size(); i++ ) {
+    		if (contains(list.get(j))){
+    			j++;
+    		}
+    	}
+    	return (j == list.size());
     }
 
     /*
@@ -262,8 +264,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
-
-
+    	size = 0;
     }
 
     public static void main(String[] args) {
