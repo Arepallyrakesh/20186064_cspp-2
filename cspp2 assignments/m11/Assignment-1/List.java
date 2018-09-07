@@ -230,7 +230,7 @@ public class List {
      {
         // write the logic       
         for (int i = 0; i < newArray.length; i++) {
-        	remove(i);
+        	remove(newArray.length);
         }
     }
     /*
