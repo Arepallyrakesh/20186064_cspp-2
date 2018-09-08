@@ -41,6 +41,23 @@ class Set {
         }
         return -1;
     }
+    public String toString() {
+
+
+        if (size == 0) {
+            return "{}";
+        }
+        String s = "{";
+        int i;
+        for (i = 0; i < size - 1; i++) {
+            s = s + list[i] + ",";
+        }
+        s = s + list[i] + "}";
+        /*if (list[0] == 0) {
+                s += "\nInvalid Position Exception";
+            }*/
+        return s;
+    }
 }
 /**
  * Solution class for code-eval.
