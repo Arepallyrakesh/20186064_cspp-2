@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : Arepallyrakesh
+ * @author : 
  */
 class Set {
     //your code goes here...
@@ -12,34 +12,18 @@ class Set {
     private int[] list;
     private int size;
     public Set() {
-         size = 0;
+        list = new int[10];
+        size = 0;
     }
-    public void add(final int item) {
-        if (list.length == size) {
-            resize(item);
-        }
+    public void add(int item) {
+
+        //Inserts the specified element at the end of the zelist
         list[size++] = item;
     }
     public int size() {
+
+        // replace the code below to implement the size method
         return size;
-    }
-    public boolean contains(final int item) {
-
-        return indexOf(item) == -1;
-    }
-    private void resize(final int item) {
-
-        this.list = Arrays.copyOf(this.list, list.length * 2);
-        list[size++] = item;
-    }
-    public int indexOf(final int item) {
-
-        for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
-                return i;
-            }
-        }
-        return -1;
     }
     public String toString() {
 
@@ -53,10 +37,23 @@ class Set {
             s = s + list[i] + ",";
         }
         s = s + list[i] + "}";
-        /*if (list[0] == 0) {
+        if (list[0] == 0) {
                 s += "\nInvalid Position Exception";
-            }*/
+            }
         return s;
+    }
+    public boolean contains(final int item) {
+
+        return indexOf(item) == -1;
+    }
+    public int indexOf(final int item) {
+
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
 /**
@@ -123,7 +120,7 @@ public final class Solution {
                     s.add(intArray);
                 }*/
                 break;
-                /*case "intersection":
+               /* case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
