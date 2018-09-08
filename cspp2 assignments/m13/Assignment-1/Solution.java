@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author : Arepallyrakesh
  */
 class Set {
     //your code goes here...
@@ -12,18 +12,29 @@ class Set {
     private int[] list;
     private int size;
     public Set() {
-        list = new int[10];
+        list = new int[30];
         size = 0;
     }
     public void add(int item) {
 
         //Inserts the specified element at the end of the zelist
-        list[size++] = item;
+        if (size == list.length) {
+            resize();
+        }
+        if (contains(item) != true) {
+            list[size++] = item;
+        }
     }
+    
     public void add(int[] item) {
 
         //Inserts the specified element at the end of the zelist
-        list[size] = 0;
+        for (int i = 0; i < item.length; i++) {
+            add(item[i]);
+        }
+    }
+    private void resize() {
+        list = Arrays.copyOf(list, 2 * size);
     }
     public int size() {
 
@@ -42,9 +53,9 @@ class Set {
             s = s + list[i] + ",";
         }
         s = s + list[i] + "}";
-        if (list[0] == 0) {
+        /*if (list[0] == 0) {
                 s += "\nInvalid Position Exception";
-            }
+            }*/
         return s;
     }
     public boolean contains(final int item) {
@@ -63,6 +74,16 @@ class Set {
         }
         return -1;
     }
+    public Set intersection(final Set t) {
+        Set result = new Set();
+        for (int i = 0; i < size; i++) {
+            if (t.contains(list[i])) {
+                result.add(list[i]);
+            }
+        }
+        return result;
+    }
+
 }
 /**
  * Solution class for code-eval.
@@ -128,7 +149,7 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-               /* case "intersection":
+                case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -137,7 +158,7 @@ public final class Solution {
                 t.add(intArray);
                 System.out.println(s.intersection(t));
                 break;
-                case "retainAll":
+                /*case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);

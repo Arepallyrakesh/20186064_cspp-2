@@ -28,3 +28,20 @@ public static List<Integer> intersection(List<Integer> a, List<Integer> b){
     return result;
 }
 
+public int[] cartesianProduct(int[] s1, int[] s2) {
+
+    ArrayList<Integer> list = new ArrayList<>();
+    for(int i=0;i < s1.length;i++){
+    for (int v1: s1) {
+        for (int v2: s2) {
+            list.add(s1[i], s2[i]);
+            }
+        }
+    }
+        int[] result = new int[list.size()];
+        int k=0;
+        for(int i: list){
+            result[k++] = i;
+        }   
+        return result;
+}
