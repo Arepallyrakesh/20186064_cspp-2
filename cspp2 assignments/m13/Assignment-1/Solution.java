@@ -50,7 +50,7 @@ class Set {
         String s = "{";
         int i;
         for (i = 0; i < size - 1; i++) {
-            s = s + list[i] + ",";
+            s = s + list[i] + ", ";
         }
         s = s + list[i] + "}";
         /*if (list[0] == 0) {
