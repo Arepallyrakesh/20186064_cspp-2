@@ -20,6 +20,11 @@ class Set {
         //Inserts the specified element at the end of the zelist
         list[size++] = item;
     }
+    public void add(int[] item) {
+
+        //Inserts the specified element at the end of the zelist
+        list[size] = 0;
+    }
     public int size() {
 
         // replace the code below to implement the size method
@@ -44,7 +49,10 @@ class Set {
     }
     public boolean contains(final int item) {
 
-        return indexOf(item) == -1;
+         if (indexOf(item) >= 0) {
+            return true;
+        }
+        return false;
     }
     public int indexOf(final int item) {
 
@@ -117,7 +125,7 @@ public final class Solution {
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
-                    s.add(intArray[1]);
+                    s.add(intArray);
                 }
                 break;
                /* case "intersection":
