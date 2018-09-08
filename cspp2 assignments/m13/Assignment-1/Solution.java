@@ -116,9 +116,9 @@ public final class Solution {
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
-                } /*else {
-                    s.add(intArray);
-                }*/
+                } else {
+                    s.add(intArray[1]);
+                }
                 break;
                /* case "intersection":
                 s = new Set();
