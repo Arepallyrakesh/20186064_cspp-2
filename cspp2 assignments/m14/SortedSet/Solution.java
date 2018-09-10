@@ -13,7 +13,25 @@ public class Solution{
 		if(size == set.length) {
 			resize();
 		} else {
-			set[size++] = item;
+			for (int i = 0 ; i < size() ;i++ ) {
+				int c = 0;
+				for (int j = 0;j<size() ;j++ ) {
+					if (item == set[j]) {
+						c+=1;
+						if(c==0){
+							if(item>set[i]){
+								set[i] = item;
+								size++;
+							}else{
+								for (int p =i;p<size();p++){
+									set[p+1] = set[p];
+					}
+				}
+			}
+
+					}
+				}
+			}
 		}
 
 	}
