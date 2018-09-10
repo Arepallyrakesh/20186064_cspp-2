@@ -18,14 +18,13 @@ public class Solution{
 				for (int j = 0;j<size() ;j++ ) {
 					if (item == set[j]) {
 						c+=1;
+					}	
 						if(c==0){
-							if(item>set[i]){
-								set[i] = item;
-								size++;
+							if(!(item>set[i])){
+								
 							}else{
 								for (int p =i;p<size();p++){
 									set[p+1] = set[p];
-					}
 				}
 			}
 
