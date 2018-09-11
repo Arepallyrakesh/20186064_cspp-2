@@ -203,14 +203,14 @@ public class Solution {
     @param      end    The end
     @return     { description_of_the_return_value }
     */
-    public Solution subList(final int start, final int end) {
+    public Solution subList(final int start, final int end) throws Exception {
 
      Solution newlist = new Solution();
     // write the logic for subList
         if (start >= -1) {
             if (start == end  || start == end - 1
                 || start > end || start == -1) {
-                System.out.println("Index Out of Bounds Exception");
+                throw new Exception("Index Out of Bounds Exception");
                 } else {
                 for (int i = start; i < end; i++) {
                     newlist.add(list[i]);
@@ -321,6 +321,7 @@ public class Solution {
                     }
                 break;
                 case "subList":
+                try{
                     if (tokens.length != 2) {
                         break;
                     }
@@ -330,6 +331,9 @@ public class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
+                } catch(Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -349,6 +353,7 @@ public class Solution {
                         System.out.println(l.count(
                             Integer.parseInt(tokens[1])));
                     }
+                break;
                 default:
                 break;
             }
