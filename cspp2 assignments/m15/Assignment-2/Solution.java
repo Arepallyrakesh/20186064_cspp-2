@@ -44,7 +44,7 @@ class SortedSet extends Set  {
      */
     public int[] subSet(final int start, final int end) throws Exception {
         if (start > end) {
-            throw new Exception ("Invalid Arguments to Subset Exception");
+            throw new Exception("Invalid Arguments to Subset Exception");
         } else {
         int[] result = new int[size];
         int k = 0;
@@ -61,14 +61,15 @@ class SortedSet extends Set  {
         return Arrays.copyOf(result, k);
         }
     }
+
     /**
-     * headset function.
+     * { function_description }.
      *
      * @param      end        The end
      *
-     * @return     returms elements.
+     * @return     { description_of_the_return_value }
      *
-     * @throws     Exception  { set empty exception }
+     * @throws     Exception  { exception_description }
      */
     public int[] headSet(final int end) throws Exception {
 
