@@ -14,6 +14,7 @@ public class Solution {
 
     private int[] list;
 
+
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -193,7 +194,7 @@ public class Solution {
         }
      }
     public int count(final int item) {
-        if(this.list.length > 0) {
+        if (this.list.length > 0) {
             int count = 0;
             for (int i = 0;i < size(); i++) {
                 if (item == this.list[i]) {
@@ -290,11 +291,11 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                try{
+                try {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 break;
@@ -337,7 +338,7 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                try{
+                try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -347,7 +348,7 @@ public class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                     break;
