@@ -1,6 +1,6 @@
 /**
  * Set Solution.
- * @author : Arepallyrakesh
+ * @author : Arepallyrakesh.
  */
 import java.io.BufferedInputStream;
 import java.util.Scanner;

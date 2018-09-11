@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for set.
- * @author     :Arepallyrakeshs 
+ * @author     : Arepallyrakesh
  */
 class Set {
     //your code goes here...
