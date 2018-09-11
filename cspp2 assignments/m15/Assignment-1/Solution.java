@@ -63,14 +63,14 @@ public class Solution {
     /**
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
             for (int i = index; i <= size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
         } else {
-            System.out.println("Invalid Position Exception");
+            throw new Exception ("Invalid Position Exception");
         }
     }
 
@@ -175,7 +175,11 @@ public class Solution {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
-                remove(i);
+                try {
+                    remove(i);
+                } catch(Exception ex){
+                    System.out.println(ex.getMessage());
+                }
                 index = indexOf(newArray[i]);
             }
         }
@@ -278,9 +282,13 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
+                try{
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
+                } catch(Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
