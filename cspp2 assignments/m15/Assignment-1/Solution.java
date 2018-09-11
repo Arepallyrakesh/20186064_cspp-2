@@ -25,7 +25,6 @@ public class Solution {
     public Solution() {
         list = new int[TEN];
         size = 0;
-
     }
     /**
      * The add method does what the name suggests. Add an int item to the list.
