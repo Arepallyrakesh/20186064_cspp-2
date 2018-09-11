@@ -7,8 +7,13 @@ import java.util.Arrays;
  * @author : Arepallyrakesh
  */
 
+/**
+ * Class for solution.
+ */
 public class Solution {
+
     private int[] list;
+
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -22,6 +27,10 @@ public class Solution {
     *@variable TEN variable.
     */
     private static final int TEN = 10;
+
+    /**
+     * Constructs the object.
+     */
     public Solution() {
         list = new int[TEN];
         size = 0;
