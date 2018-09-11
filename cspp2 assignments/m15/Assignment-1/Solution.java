@@ -11,10 +11,14 @@ import java.util.Arrays;
  * Class for solution.
  */
 public class Solution {
-
+    /**
+     * private.
+     */
     private int[] list;
 
-
+    /**
+     * private int.
+     */
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -79,7 +83,7 @@ public class Solution {
             }
             size--;
         } else {
-            throw new Exception ("Invalid Position Exception");
+            throw new Exception("Invalid Position Exception");
         }
     }
 
@@ -186,7 +190,7 @@ public class Solution {
             while (index != -1) {
                 try {
                     remove(i);
-                } catch (Exception ex){
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 index = indexOf(newArray[i]);
