@@ -74,7 +74,7 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index      The index
      *
@@ -234,7 +234,7 @@ public class Solution {
     */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      start      The start
      * @param      end        The end
