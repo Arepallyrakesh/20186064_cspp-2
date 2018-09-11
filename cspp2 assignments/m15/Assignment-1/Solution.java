@@ -186,7 +186,7 @@ public class Solution {
             while (index != -1) {
                 try {
                     remove(i);
-                } catch(Exception ex){
+                } catch (Exception ex){
                     System.out.println(ex.getMessage());
                 }
                 index = indexOf(newArray[i]);
@@ -194,7 +194,7 @@ public class Solution {
         }
      }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
