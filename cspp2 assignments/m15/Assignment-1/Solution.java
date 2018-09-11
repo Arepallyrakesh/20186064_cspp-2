@@ -180,6 +180,17 @@ public class Solution {
             }
         }
      }
+    public void count(final int item) {
+        if(this.list.length > 0) {
+            int count = 0;
+            for (int i = 0;i < size(); i++) {
+                if (item == this.list[i]) {
+                    count += 1;
+                }
+            }
+            System.out.println(count);
+        }
+     }
     /**
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
