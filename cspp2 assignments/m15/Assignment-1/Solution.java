@@ -74,9 +74,14 @@ public class Solution {
     }
 
     /**
-     * @param      index  The index
+     * { function_description }
+     *
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
+
         if (index >= 0 && index < size) {
             for (int i = index; i <= size - 1; i++) {
                 list[i] = list[i + 1];
@@ -227,6 +232,17 @@ public class Solution {
     @param      end    The end
     @return     { description_of_the_return_value }
     */
+
+    /**
+     * { function_description }
+     *
+     * @param      start      The start
+     * @param      end        The end
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
+     */
     public Solution subList(final int start, final int end) throws Exception {
 
      Solution newlist = new Solution();
