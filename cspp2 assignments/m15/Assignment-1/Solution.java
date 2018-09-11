@@ -180,7 +180,7 @@ public class Solution {
             }
         }
      }
-    public void count(final int item) {
+    public int count(final int item) {
         if(this.list.length > 0) {
             int count = 0;
             for (int i = 0;i < size(); i++) {
@@ -188,7 +188,9 @@ public class Solution {
                     count += 1;
                 }
             }
-            System.out.println(count);
+            return count;
+        } else {
+            return 0;
         }
      }
     /**
@@ -342,6 +344,11 @@ public class Solution {
                 case "clear":
                     l.clear();
                 break;
+                case "count" :
+                    if (tokens.length == 2) {
+                        System.out.println(l.count(
+                            Integer.parseInt(tokens[1])));
+                    }
                 default:
                 break;
             }
