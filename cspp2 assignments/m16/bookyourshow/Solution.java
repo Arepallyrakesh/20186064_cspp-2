@@ -206,7 +206,8 @@ class BookYourShow {
             String[] bookseats = p.getBookseats();
             for (int i = 0; i < seats.length; i++) {
                 for (int j = 0; j < bookseats.length; j++) {
-                    if (seats[i].equals(bookseats[j]) && !seats[i].equals("N/A")) {
+                    if (seats[i].equals(bookseats[j])
+                        && !seats[i].equals("N/A")) {
                         seats[i] = "N/A";
                     }
                 }
@@ -224,9 +225,10 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(final String moviename,final String date) {
+    public Show getAShow(final String moviename, final String date) {
         for (int i = 0; i < showsize; i++) {
-            if (shows[i].getMoviename().equals(moviename) && shows[i].getShowdate().equals(date)) {
+            if (shows[i].getMoviename().equals(moviename) &&
+                shows[i].getShowdate().equals(date)) {
                 return shows[i];
             }
         }
@@ -273,8 +275,7 @@ class BookYourShow {
 
 
 public final class Solution {
-
-    /**
+   /**
      * Constructs the object.
      */
     private Solution() {
