@@ -24,10 +24,10 @@ class Show {
      * @param      date       The date
      * @param      seats      The seats
      */
-    Show(final String moviename, final String date, final String[] seats) {
-        this.moviename = moviename;
-        this.date = date;
-        this.seats = seats;
+    Show(final String mname, final String showdate, final String[] seat1) {
+        this.moviename = mname;
+        this.date = showdate;
+        this.seats = seat1;
     }
     /**
      * Gets the moviename.
