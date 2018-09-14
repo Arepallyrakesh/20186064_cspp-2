@@ -79,11 +79,18 @@ class Show {
  * Class for patron.
  */
 class Patron {
+    /**
+     * patronname description.
+     */
     private String patronname;
+    /**
+     * mobilenum description.
+     */
     private String mobilenum;
+    /**
+     * bookedseats description.
+     */
     private String[] bookseats;
-
-
     Patron(final String name, final String phnnum, final String[] seat1) {
         this.patronname = name;
         this.mobilenum = phnnum;
@@ -128,7 +135,6 @@ class Patron {
         return s;
     }
 }
-
 /**
  * Class for book your show.
  */
