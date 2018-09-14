@@ -17,7 +17,6 @@ class Show {
      * seats description.
      */
     private String[] seats;
-
     /**
      * Constructs the object.
      *
@@ -38,7 +37,6 @@ class Show {
     public String getMoviename() {
         return this.moviename;
     }
-
     /**
      * Gets the showdate.
      *
@@ -47,7 +45,6 @@ class Show {
     public String getShowdate() {
         return this.date;
     }
-
     /**
      * Gets the seats.
      *
