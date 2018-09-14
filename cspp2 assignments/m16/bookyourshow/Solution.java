@@ -65,7 +65,7 @@ class Show {
         return s;
     }
     /**
-     * { function_description }
+     * printExceptTickets.
      *
      * @return     { description_of_the_return_value }
      */
