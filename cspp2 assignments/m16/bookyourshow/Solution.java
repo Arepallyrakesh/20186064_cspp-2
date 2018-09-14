@@ -20,9 +20,9 @@ class Show {
     /**
      * Constructs the object.
      *
-     * @param      moviename  The moviename
-     * @param      date       The date
-     * @param      seats      The seats
+     * @param      mname  The moviename
+     * @param      showdate       The date
+     * @param      seat1      The seats
      */
     Show(final String mname, final String showdate, final String[] seat1) {
         this.moviename = mname;
@@ -369,3 +369,5 @@ public final class Solution {
         }
     }
 }
+
+
