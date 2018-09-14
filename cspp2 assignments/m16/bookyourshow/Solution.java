@@ -19,6 +19,12 @@ class Show {
     public String[] getSeats() {
         return this.seats;
     }
+    public String toString() {
+        String s = "";
+        s += moviename + "," + date + ",";
+        s += Arrays.toString(seats).replace(", ", ",");
+        return s;
+    }
 }
 class Patron {
 	private String patronname;
