@@ -24,7 +24,7 @@ class Show {
      * @param      date       The date
      * @param      seats      The seats
      */
-    Show(String moviename, String date, String[] seats) {
+    Show(final String moviename, final String date, final String[] seats) {
         this.moviename = moviename;
         this.date = date;
         this.seats = seats;
@@ -166,7 +166,7 @@ class BookYourShow {
      *
      * @param      no_show  No show
      */
-    public void addAShow(Show no_show) {
+    public void addAShow(final Show no_show) {
         if (showsize == shows.length) {
             showresize();
         }
@@ -192,7 +192,7 @@ class BookYourShow {
      * @param      date       The date
      * @param      p          { parameter_description }
      */
-    public void bookAShow(String moviename, String date, Patron p) {
+    public void bookAShow(final String moviename,final String date,final Patron p) {
         addAPatron(p);
         Show availableshow = getAShow(moviename, date);
         if (availableshow != null) {
@@ -218,7 +218,7 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(String moviename, String date) {
+    public Show getAShow(final String moviename,final String date) {
         for (int i = 0; i < showsize; i++) {
             if (shows[i].getMoviename().equals(moviename) && shows[i].getShowdate().equals(date)) {
                 return shows[i];
