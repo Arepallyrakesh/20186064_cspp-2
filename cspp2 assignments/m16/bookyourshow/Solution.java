@@ -81,7 +81,7 @@ class BookYourShow {
             String[] bookseats = p.getBookseats();
             for (int i = 0; i < seats.length; i++) {
                 for (int j = 0; j < bookseats.length; j++) {
-                    if (seats[i].equals(bookseats[j])) {
+                    if (seats[i].equals(bookseats[j]) && !seats[i].equals("N/A")) {
                         seats[i] = "N/A";
                     }
                 }
