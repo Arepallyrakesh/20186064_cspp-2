@@ -234,7 +234,7 @@ class BookYourShow {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      moviename  The moviename
      * @param      date       The date
@@ -242,7 +242,8 @@ class BookYourShow {
      *
      * @return     { description_of_the_return_value }
      */
-    public String printTicket(final String moviename, final String date, final String mobilenum ) {
+    public String printTicket(final String moviename,
+        final String date, final String mobilenum) {
         Show show = getAShow(moviename, date);
         String str = "Invalid";
         if (show != null) {
@@ -250,7 +251,7 @@ class BookYourShow {
             for (int j = 0; j < patronsize; j++) {
                 str = "Invalid";
                 if (patrons[j].getMobilenum().equals(mobilenum)) {
-                    str = mobilenum + " "+ moviename + " " + date;
+                    str = mobilenum + " " + moviename + " " + date;
                     return str;
                 }
             }
@@ -272,6 +273,7 @@ class BookYourShow {
 
 
 public final class Solution {
+
     /**
      * Constructs the object.
      */
@@ -308,7 +310,7 @@ public final class Solution {
                         seats[j] = tokens[k++];
                     }
                     bys.bookAShow(check[1], tokens[1],
-                        new Patron(tokens[2], tokens[2 + 1] , seats));
+                        new Patron(tokens[2], tokens[2 + 1], seats));
                 break;
 
                 case "get":
@@ -320,7 +322,8 @@ public final class Solution {
                     }
                 break;
 
-                case "print":System.out.println(bys.printTicket(check[1], tokens[1], tokens[2]));
+                case "print":System.out.println(bys.printTicket(check[1],
+                tokens[1], tokens[2]));
                 break;
 
                 case "showAll":
