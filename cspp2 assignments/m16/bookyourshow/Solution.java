@@ -135,6 +135,7 @@ class Patron {
         return s;
     }
 }
+
 /**
  * Class for book your show.
  */
@@ -146,9 +147,10 @@ class BookYourShow {
 
     private int showsize;
     private int patronsize;
+    private static final int TEN = 10;
     BookYourShow(){
-        shows = new Show[10];
-        patrons = new Patron[10];
+        shows = new Show[TEN];
+        patrons = new Patron[TEN];
         showsize = 0;
         patronsize = 0;
     }
@@ -170,9 +172,10 @@ class BookYourShow {
     /**
      * Adds a show.
      *
-     * @param      no_show  No show
+     * @param      noshow  No show.
      */
     public void addAShow(final Show noshow) {
+
         if (showsize == shows.length) {
             showresize();
         }
@@ -228,7 +231,7 @@ class BookYourShow {
      */
     public Show getAShow(final String moviename, final String date) {
         for (int i = 0; i < showsize; i++) {
-            if (shows[i].getMoviename().equals(moviename) 
+            if (shows[i].getMoviename().equals(moviename)
                 && shows[i].getShowdate().equals(date)) {
                 return shows[i];
             }
