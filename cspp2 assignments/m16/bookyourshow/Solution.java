@@ -1,86 +1,179 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Class for show.
+ */
 class Show {
-	private String moviename;
-	private String date;
-	private String[] seats;
-	Show(String moviename, String date, String[] seats) {
-		this.moviename = moviename;
-		this.date = date;
-		this.seats = seats;
-	}
+    private String moviename;
+    private String date;
+    private String[] seats;
+
+    /**
+     * Constructs the object.
+     *
+     * @param      moviename  The moviename
+     * @param      date       The date
+     * @param      seats      The seats
+     */
+    Show(String moviename, String date, String[] seats) {
+        this.moviename = moviename;
+        this.date = date;
+        this.seats = seats;
+    }
+    /**
+     * Gets the moviename.
+     *
+     * @return     The moviename.
+     */
     public String getMoviename() {
         return this.moviename;
     }
+
+    /**
+     * Gets the showdate.
+     *
+     * @return     The showdate.
+     */
     public String getShowdate() {
         return this.date;
     }
+
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     public String[] getSeats() {
         return this.seats;
     }
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += moviename + "," + date + ",";
         s += Arrays.toString(seats).replace(", ", ",");
         return s;
     }
+
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String printExceptTickets() {
         String s = "";
         s += moviename + "," + date;
         return s;
     }
 }
+/**
+ * Class for patron.
+ */
 class Patron {
-	private String patronname;
-	private String mobilenum;
-	private String[] bookseats;
+    private String patronname;
+    private String mobilenum;
+    private String[] bookseats;
 
-   	Patron(final String name, final String phnnum, final String[] seat1) {
-   		this.patronname = name;
+
+    Patron(final String name, final String phnnum, final String[] seat1) {
+        this.patronname = name;
         this.mobilenum = phnnum;
         this.bookseats = seat1;
 
     }
+
+    /**
+     * Gets the patronname.
+     *
+     * @return     The patronname.
+     */
     public String getPatronname() {
         return this.patronname;
     }
+
+    /**
+     * Gets the mobilenum.
+     *
+     * @return     The mobilenum.
+     */
     public String getMobilenum() {
         return this.mobilenum;
     }
+
+    /**
+     * Gets the bookseats.
+     *
+     * @return     The bookseats.
+     */
     public String[] getBookseats() {
         return this.bookseats;
     }
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         return s;
     }
 }
 
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
-	private Show[] shows;
-	private Patron[] patrons;
-	private int showsize;
-	private int patronsize;
-	BookYourShow(){
-		shows = new Show[10];
-	    patrons = new Patron[10];
-	    showsize = 0;
-	    patronsize = 0;
-	}
-	public void showresize() {
+
+    private Show[] shows;
+
+    private Patron[] patrons;
+
+    private int showsize;
+    private int patronsize;
+    BookYourShow(){
+        shows = new Show[10];
+        patrons = new Patron[10];
+        showsize = 0;
+        patronsize = 0;
+    }
+
+    /**
+     * { function_description }.
+     */
+    public void showresize() {
         shows = Arrays.copyOf(shows, shows.length * 2);
     }
+
+    /**
+     * { function_description }.
+     */
     public void patronresize() {
         patrons = Arrays.copyOf(patrons, patrons.length * 2);
     }
 
-	public void addAShow(Show no_show) {
-		if (showsize == shows.length) {
+    /**
+     * Adds a show.
+     *
+     * @param      no_show  No show
+     */
+    public void addAShow(Show no_show) {
+        if (showsize == shows.length) {
             showresize();
         }
         shows[showsize++] = no_show;
-	}
+    }
+
+    /**
+     * Adds a patron.
+     *
+     * @param      npatron  The npatron
+     */
     public void addAPatron(final Patron npatron) {
     if (patronsize == patrons.length) {
         patronresize();
@@ -88,8 +181,15 @@ class BookYourShow {
     patrons[patronsize++] = npatron;
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      moviename  The moviename
+     * @param      date       The date
+     * @param      p          { parameter_description }
+     */
     public void bookAShow(String moviename, String date, Patron p) {
-    	addAPatron(p);
+        addAPatron(p);
         Show availableshow = getAShow(moviename, date);
         if (availableshow != null) {
             String[] seats = availableshow.getSeats();
@@ -106,6 +206,14 @@ class BookYourShow {
         }
     }
 
+    /**
+     * Gets a show.
+     *
+     * @param      moviename  The moviename
+     * @param      date       The date
+     *
+     * @return     A show.
+     */
     public Show getAShow(String moviename, String date) {
         for (int i = 0; i < showsize; i++) {
             if (shows[i].getMoviename().equals(moviename) && shows[i].getShowdate().equals(date)) {
@@ -115,8 +223,17 @@ class BookYourShow {
         return null;
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      moviename  The moviename
+     * @param      date       The date
+     * @param      mobilenum  The mobilenum
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String printTicket(final String moviename, final String date, final String mobilenum ) {
-    	Show show = getAShow(moviename, date);
+        Show show = getAShow(moviename, date);
         String str = "Invalid";
         if (show != null) {
             str = "No show";
@@ -130,8 +247,12 @@ class BookYourShow {
         }
         return str;
     }
+
+    /**
+     * Shows all.
+     */
     public void showAll() {
-    	for (int i = 0; i < showsize; i++) {
+        for (int i = 0; i < showsize; i++) {
             System.out.println(shows[i]);
         }
     }
