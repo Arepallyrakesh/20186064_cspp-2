@@ -172,11 +172,11 @@ class BookYourShow {
      *
      * @param      no_show  No show
      */
-    public void addAShow(final Show no_show) {
+    public void addAShow(final Show noshow) {
         if (showsize == shows.length) {
             showresize();
         }
-        shows[showsize++] = no_show;
+        shows[showsize++] = noshow;
     }
 
     /**
@@ -192,13 +192,14 @@ class BookYourShow {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      moviename  The moviename
      * @param      date       The date
      * @param      p          { parameter_description }
      */
-    public void bookAShow(final String moviename,final String date,final Patron p) {
+    public void bookAShow(final String moviename,
+        final String date, final Patron p) {
         addAPatron(p);
         Show availableshow = getAShow(moviename, date);
         if (availableshow != null) {
@@ -227,8 +228,8 @@ class BookYourShow {
      */
     public Show getAShow(final String moviename, final String date) {
         for (int i = 0; i < showsize; i++) {
-            if (shows[i].getMoviename().equals(moviename) &&
-                shows[i].getShowdate().equals(date)) {
+            if (shows[i].getMoviename().equals(moviename) 
+                && shows[i].getShowdate().equals(date)) {
                 return shows[i];
             }
         }
