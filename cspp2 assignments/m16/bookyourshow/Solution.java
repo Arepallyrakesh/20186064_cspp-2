@@ -91,7 +91,8 @@ class Patron {
      * bookedseats description.
      */
     private String[] bookseats;
-    Patron(final String name, final String phnnum, final String[] seat1) {
+    Patron(final String name, final String phnnum,
+            final String[] seat1) {
         this.patronname = name;
         this.mobilenum = phnnum;
         this.bookseats = seat1;
@@ -140,14 +141,32 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
-
+    /**
+     * shows array description.
+     */
     private Show[] shows;
-
+    /**
+     * patron array description.
+     */
     private Patron[] patrons;
-
+    /**
+     * showsize description.
+     */
     private int showsize;
+    /**
+     * patronsize description.
+     */
     private int patronsize;
+    /**
+     * Constructs the object.
+     */
+    /**
+     * @variable TEN.
+     */
     private static final int TEN = 10;
+    /**
+     * Constructs the object.
+     */
     BookYourShow(){
         shows = new Show[TEN];
         patrons = new Patron[TEN];
@@ -156,7 +175,7 @@ class BookYourShow {
     }
 
     /**
-     * { function_description }.
+     * showresize method.
      */
     public void showresize() {
         shows = Arrays.copyOf(shows, shows.length * 2);
