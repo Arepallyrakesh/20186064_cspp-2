@@ -91,6 +91,14 @@ class Patron {
      * bookedseats description.
      */
     private String[] bookseats;
+
+    /**
+     * Constructs the object.
+     *
+     * @param      name    The name
+     * @param      phnnum  The phnnum
+     * @param      seat1   The seat 1
+     */
     Patron(final String name, final String phnnum,
             final String[] seat1) {
         this.patronname = name;
@@ -167,7 +175,7 @@ class BookYourShow {
     /**
      * Constructs the object.
      */
-    BookYourShow(){
+    BookYourShow() {
         shows = new Show[TEN];
         patrons = new Patron[TEN];
         showsize = 0;
@@ -295,8 +303,9 @@ class BookYourShow {
 
 
 }
-
-
+/**
+ * class Solution.
+ */
 public final class Solution {
    /**
      * Constructs the object.
