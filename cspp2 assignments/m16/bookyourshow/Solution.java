@@ -5,8 +5,17 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
+    /**
+     * moviename description.
+     */
     private String moviename;
+    /**
+     * showdate description.
+     */
     private String date;
+    /**
+     * seats description.
+     */
     private String[] seats;
 
     /**
@@ -47,7 +56,6 @@ class Show {
     public String[] getSeats() {
         return this.seats;
     }
-
     /**
      * Returns a string representation of the object.
      *
@@ -59,7 +67,6 @@ class Show {
         s += Arrays.toString(seats).replace(", ", ",");
         return s;
     }
-
     /**
      * { function_description }
      *
