@@ -25,6 +25,11 @@ class Show {
         s += Arrays.toString(seats).replace(", ", ",");
         return s;
     }
+    public String printExceptTickets() {
+        String s = "";
+        s += moviename + "," + date;
+        return s;
+    }
 }
 class Patron {
 	private String patronname;
@@ -45,6 +50,10 @@ class Patron {
     }
     public String[] getBookseats() {
         return this.bookseats;
+    }
+    public String toString() {
+        String s = "";
+        return s;
     }
 }
 
