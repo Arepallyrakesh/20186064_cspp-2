@@ -73,10 +73,8 @@ public final class Solution {
         System.out.println("| Start Quiz |");
         System.out.println("|------------|");
         for (int i = 0; i < questionCount; i++) {
-	       	System.out.println(questionCount);
 	        String tokens = s.nextLine();
 	       	String[] question = tokens.split(":");
-	        System.out.println(question[i]);
          	System.out.println(question[0]+"("+count+")");
          	String[] answer = question[1].split(",");
          	for (int j = 0; j < answer.length; j++) {
