@@ -70,8 +70,10 @@ public final class Solution {
         // tokenize the question line and create the question object
         int count = 1;
         for (int i = 0; i < questionCount; i++) {
-        	String tokens = s.nextLine();
-        	String[] question = tokens.split(":");
+	       	System.out.println(questionCount);
+	        String tokens = s.nextLine();
+	       	String[] question = tokens.split(":");
+	        System.out.println(question[i]);
          	System.out.println(question[0]+"("+count+")");
          	String[] answer = question[1].split(",");
          	for (int j = 0; j < answer.length; j++) {
