@@ -223,7 +223,7 @@ class ShoppingCart {
         float totalAmount = totalAmount();
         float discount = totalAmount * couponcode;
         float finalAmount = totalAmount - discount;
-        float payableAmount = finalAmount + (finalAmount * 15 / 100);
+        float payableAmount = finalAmount + (finalAmount * 15 / HUNDERED);
         return payableAmount;
     }
 
@@ -279,6 +279,9 @@ class ShoppingCart {
  * Class for solution.
  */
 class Solution {
+    /**
+     * main methodcls.
+     */
     public static void main(final String[] args) {
         ShoppingCart s = new ShoppingCart();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
