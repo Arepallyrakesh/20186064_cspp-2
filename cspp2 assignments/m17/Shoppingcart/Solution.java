@@ -1,5 +1,5 @@
 /**
- * @author: manojbandari.
+ * @author: Arepallyrakesh.
  */
 import java.util.Scanner;
 import java.io.BufferedInputStream;
@@ -91,7 +91,7 @@ class ShoppingCart {
     /**
      * { var_description }.
      */
-    private final int TEMP = 100;
+    private final int HUNDERED = 100;
     /**
      *  catalog size.
      */
@@ -121,8 +121,8 @@ class ShoppingCart {
      * Constructs the object.
      */
     ShoppingCart() {
-        catalog = new Item[TEMP];
-        cart = new Item[TEMP];
+        catalog = new Item[HUNDERED];
+        cart = new Item[HUNDERED];
         catalogSize = 0;
         cartSize = 0;
         flag = false;
@@ -204,8 +204,10 @@ class ShoppingCart {
         float sum = 0.0f;
         for (int i = 0; i < cartSize; i++) {
             for (int j = 0; j < catalogSize; j++) {
-                if (cart[i].getProductName().equals(catalog[j].getProductName())) {
-                    sum = sum + (cart[i].getQuantity() * catalog[j].getUnitPrice());
+                if (cart[i].getProductName().
+                    equals(catalog[j].getProductName())) {
+                    sum = sum + (cart[i].getQuantity() * catalog[j].
+                        getUnitPrice());
                 }
             }
         }
