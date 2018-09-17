@@ -322,8 +322,8 @@ public final class Solution {
 
 
         try {
-        for (int i = 0; i < q ; i++) {
-            Question question = quiz.getQuestion(i) ;
+        for (int i = 0; i < q; i++) {
+            Question question = quiz.getQuestion(i);
             System.out.println(question.getQuestionText()
                 + "(" + question.getMaxMarks() + ")");
             for (int j = 0; j < question.getChoice().length - 1; j++) {
@@ -352,3 +352,6 @@ public final class Solution {
         quiz.showReport();
     }
 }
+
+
+
