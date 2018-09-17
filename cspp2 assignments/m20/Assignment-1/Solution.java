@@ -268,7 +268,7 @@ public final class Solution {
         	for (int i = 0; i < q; i++) {
         		String[] tokens = scan.nextLine().split(":");
         		/*System.out.println(tokens[0]);*/
-        		if (tokens[0].equals("")) {
+        		if (tokens.length == 5) {
         			String[] choices = tokens[1].split(",");
         			if (choices.length > 1 ) {
         				if (Integer.parseInt(tokens[2]) <= choices.length && Integer.parseInt(tokens[2]) > 0) {
