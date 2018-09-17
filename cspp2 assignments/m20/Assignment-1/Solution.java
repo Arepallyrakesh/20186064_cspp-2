@@ -183,7 +183,7 @@ class Quiz {
         for (int i = 0; i < size; i++ ) {
         	System.out.println(getQuestion(i).getQuestionText());
         	if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
-        		System.out.println("Wrong Answer! - Awarded:" + getQuestion(i).getMaxMarks());
+        		System.out.println("Correct Answer! - Marks Awarded:" + getQuestion(i).getMaxMarks());
         		score += getQuestion(i).getMaxMarks(); 
         		
         	} else {
@@ -263,7 +263,6 @@ public final class Solution {
      */
     public static int loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) {
-    	System.out.println(q+" "+"are added to the quiz");
         // write your code here to read the questions from the console
         if (q > 0) {
         	for (int i = 0; i < q; i++) {
@@ -307,6 +306,7 @@ public final class Solution {
         	System.out.println("quiz doesnot have ");
         }
     	return 1;
+
     }
 
 
