@@ -277,7 +277,7 @@ public final class Solution {
         						if (Integer.parseInt(tokens[4]) <= 0)  {
         							Question question = new Question(tokens[0],choices,Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
         							quiz.addQuestion(question);
-        							break;	
+        							
         						} else {
         							System.out.println("error");
         							return -1;
