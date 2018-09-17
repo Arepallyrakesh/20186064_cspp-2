@@ -183,16 +183,16 @@ class Quiz {
         for (int i = 0; i < size; i++ ) {
         	System.out.println(getQuestion(i).getQuestionText());
         	if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
-        		System.out.println("Correct Answer! - Marks Awarded:" + getQuestion(i).getMaxMarks());
+        		System.out.println("Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks());
         		score += getQuestion(i).getMaxMarks(); 
         		
         	} else {
-        		System.out.println("Wrong Answer! - Penalty:" + getQuestion(i).getPenalty());
+        		System.out.println("Wrong Answer! - Penalty: " + getQuestion(i).getPenalty());
         		score += getQuestion(i).getMaxMarks(); 
         	}
         	
         }
-        System.out.println("Total Score:" + score);
+        System.out.println("Total Score: " + score);
     }
 
 }
@@ -264,6 +264,7 @@ public final class Solution {
     public static int loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) {
         // write your code here to read the questions from the console
+        System.out.println(q + " are added to the quiz");
         if (q > 0) {
         	for (int i = 0; i < q; i++) {
         		String[] tokens = scan.nextLine().split(":");
