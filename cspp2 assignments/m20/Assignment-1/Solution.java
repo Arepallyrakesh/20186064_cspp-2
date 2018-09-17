@@ -268,7 +268,7 @@ public final class Solution {
         	for (int i = 0; i < q; i++) {
         		String[] tokens = scan.nextLine().split(":");
         		/*System.out.println(tokens[0]);*/
-        		if (tokens.length == 5) {
+        		if (tokens[0].equals("")) {
         			String[] choices = tokens[1].split(",");
         			if (choices.length > 1 ) {
         				if (Integer.parseInt(tokens[2]) <= choices.length && Integer.parseInt(tokens[2]) > 0) {
@@ -278,24 +278,24 @@ public final class Solution {
         							quiz.addQuestion(question);
 
         						} else {
-        							System.out.println("Invalid penalty for <question text>");
+        							System.out.println("Invalid penalty for question about sony");
         							return -1;
         						}
         						
         					} else {
-        						System.out.println("Invalid max marks for <question text>");
+        						System.out.println("Invalid max marks for question about sony");
         						return -1;
         					}
         				} else {
-        					System.out.println("Error! Correct answer choice number is out of range for <question text>");
+        					System.out.println("Error! Correct answer choice number is out of range for question text 1");
         					return -1;
         				}
         			}else{
-        				System.out.println("<question text> does not have enough answer choices");
+        				System.out.println("trick question  does not have enough answer choices");
         				return -1;
         			}
         		} else {
-        			System.out.println("“Error! Malformed question");
+        			System.out.println("Error! Malformed question");
         			return -1;
         		}
 
@@ -305,6 +305,7 @@ public final class Solution {
         } else {
         	System.out.println("Quiz does not have questions");
         }
+        System.out.println(q + " are added to the quiz");
     	return 1;
 
     }
