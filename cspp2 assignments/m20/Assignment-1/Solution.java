@@ -190,8 +190,10 @@ class Quiz {
         		score += getQuestion(i).getPenalty(); 
         	}
         	
-        }
+        } 
+        if (score > 0){
         System.out.println("Total Score: " + score);
+        }
     }
 
 }
