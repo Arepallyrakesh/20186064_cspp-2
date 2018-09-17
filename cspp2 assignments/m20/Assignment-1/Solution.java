@@ -188,10 +188,10 @@ class Quiz {
             } else {
                 System.out.println(" Wrong Answer! - Penalty: "
                     + getQuestion(i).getPenalty());
-                score += getQuestion(i).getPenalty(); 
+                score += getQuestion(i).getPenalty();
             }
         }
-        if (score != 0){
+        if (score != 0) {
         System.out.println("Total Score: " + score);
         }
     }
@@ -236,9 +236,9 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-              
+
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
-                
+
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
@@ -264,7 +264,7 @@ public final class Solution {
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) {
         // write your code here to read the questions from the console
- 
+
         if (q >= 1) {
         for (int i = 0; i < q; i++) {
             String[] tokens = scan.nextLine().split(":");
@@ -315,14 +315,13 @@ public final class Solution {
     public static void startQuiz(final Scanner scan,
         final Quiz quiz, final int q) {
         // write your code here to display the quiz questions on the console.
-        
+
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        /*String res = ""
 
-            
-        }*/
-        try {
+
+
+        try{
         for (int i = 0; i < q ; i++) {
             Question question = quiz.getQuestion(i);
             System.out.println(question.getQuestionText()
