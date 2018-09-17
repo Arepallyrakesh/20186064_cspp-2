@@ -321,14 +321,15 @@ public final class Solution {
 
 
 
-        try{
+        try {
         for (int i = 0; i < q ; i++) {
-            Question question = quiz.getQuestion(i);
+            Question question = quiz.getQuestion(i) ;
             System.out.println(question.getQuestionText()
-                + "("+question.getMaxMarks() + ")");
+                + "(" + question.getMaxMarks() + ")");
             for (int j = 0; j < question.getChoice().length - 1; j++) {
                 System.out.print(question.getChoice()[j] + "\t");
-                
+
+
             }
             System.out.println(question.getChoice()
                 [question.getChoice().length - 1]);
