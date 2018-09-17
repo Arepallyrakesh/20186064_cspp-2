@@ -174,7 +174,6 @@ class Quiz {
     /**
      * Shows the report.
      *
-     * @return     { description_of_the_return_value }
      */
     public void showReport() {
         int score = 0;
@@ -183,22 +182,19 @@ class Quiz {
             System.out.println(getQuestion(i).getQuestionText());
             if (getQuestion(i).evaluateResponse(
                 getQuestion(i).getResponse())) {
-                System.out.println(" Correct Answer! - Marks Awarded: " +
-                    getQuestion(i).getMaxMarks());
-                score += getQuestion(i).getMaxMarks(); 
-                
+                System.out.println(" Correct Answer! - Marks Awarded: "
+                    + getQuestion(i).getMaxMarks());
+                score += getQuestion(i).getMaxMarks();
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " +
-                    getQuestion(i).getPenalty());
+                System.out.println(" Wrong Answer! - Penalty: "
+                    + getQuestion(i).getPenalty());
                 score += getQuestion(i).getPenalty(); 
             }
-            
-        } 
+        }
         if (score != 0){
         System.out.println("Total Score: " + score);
         }
     }
-
 }
 /**
  * Solution class for code-eval.
@@ -329,12 +325,14 @@ public final class Solution {
         try {
         for (int i = 0; i < q ; i++) {
             Question question = quiz.getQuestion(i);
-            System.out.println(question.getQuestionText() + "("+question.getMaxMarks() + ")");
+            System.out.println(question.getQuestionText()
+                + "("+question.getMaxMarks() + ")");
             for (int j = 0; j < question.getChoice().length - 1; j++) {
                 System.out.print(question.getChoice()[j] + "\t");
                 
             }
-            System.out.println(question.getChoice()[question.getChoice().length - 1]);
+            System.out.println(question.getChoice()
+                [question.getChoice().length - 1]);
             System.out.println();
             String response = scan.nextLine();
             question.setResponse(response);
@@ -349,7 +347,8 @@ public final class Solution {
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
-        // write your code here to display the score report using quiz object.
+        // write your code here to display the score
+        //report using quiz object.
         quiz.showReport();
     }
 }
