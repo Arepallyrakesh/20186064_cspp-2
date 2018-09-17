@@ -187,7 +187,7 @@ class Quiz {
         		
         	} else {
         		System.out.println(" Wrong Answer! - Penalty: " + getQuestion(i).getPenalty());
-        		score += getQuestion(i).getMaxMarks(); 
+        		score += getQuestion(i).getPenalty(); 
         	}
         	
         }
