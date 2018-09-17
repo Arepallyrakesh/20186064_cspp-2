@@ -364,6 +364,7 @@ public final class Solution {
 
         	
         }*/
+        try {
         for (int i = 0; i < q ; i++) {
         	Question question = quiz.getQuestion(i);
         	System.out.println(question.getQuestionText()+"("+question.getMaxMarks()+")");
@@ -376,6 +377,9 @@ public final class Solution {
         	String response = scan.nextLine();
         	question.setResponse(response);
         }
+    } catch (Exception e) {
+    	return;
+    }
     }
     /**
      * Displays the score report.
