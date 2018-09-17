@@ -177,9 +177,19 @@ class Quiz {
      *
      * @return     { description_of_the_return_value }
      */
-    public String showReport() {
+    public void showReport() {
+    	int score = 0;
         String s = "";
-        return s;
+        for (int i = 0; i < size; i++ ) {
+        	System.out.println(getQuestion(i).getQuestionText());
+        	if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
+        		System.out.println("Wrong Answer! - Awarded:" + getQuestion(i).getMaxMarks());
+        		
+        	} else {
+        		System.out.println("Wrong Answer! - Penalty:" + getQuestion(i).getPenalty());
+        	}
+        	
+        }
     }
 
 }
@@ -322,6 +332,9 @@ public final class Solution {
         		
         	}
         	System.out.println(question.getChoice()[question.getChoice().length - 1]);
+        	System.out.println();
+        	String response = scan.nextLine();
+        	question.setResponse(response);
         }
     }
     /**
