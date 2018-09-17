@@ -191,7 +191,7 @@ class Quiz {
         	}
         	
         } 
-        if (score > 0){
+        if (score != 0){
         System.out.println("Total Score: " + score);
         }
     }
