@@ -384,6 +384,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
-        quiz.showReport();
+        if (quiz.getQuestion(0) != null) {
+            quiz.showReport();
     }
-}
+}}
