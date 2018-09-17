@@ -264,11 +264,10 @@ public final class Solution {
         final Quiz quiz, final int q) {
         // write your code here to read the questions from the console
         /*System.out.println(q + " are added to the quiz");*/
-       /* if (q > 0) {
+        if (q > 0) {
         	for (int i = 0; i < q; i++) {
-        		String[] tokens = scan.nextLine().split(":");*/
-        		/*System.out.println(tokens[0]);*/
-        		/*if (tokens.length == 5) {
+        		String[] tokens = scan.nextLine().split(":");
+        		if (tokens.length == 5) {
         			String[] choices = tokens[1].split(",");
         			if (choices.length > 1 ) {
         				if (Integer.parseInt(tokens[2]) <= choices.length && Integer.parseInt(tokens[2]) > 0) {
@@ -305,10 +304,10 @@ public final class Solution {
         } else {
         	System.out.println("Quiz does not have questions");
         }
+        System.out.println(q + " are added to the quiz");
     	return 1;
 
-        System.out.println(q + " are added to the quiz");*/
-        for (int i = 0; i < q; i++) {
+       /* for (int i = 0; i < q; i++) {
     		String[] tokens = scan.nextLine().split(":");
     		String[] choices = tokens[1].split(",");
 	        if (q < 0) {
@@ -327,9 +326,9 @@ public final class Solution {
 		    	Question question = new Question(tokens[0],choices,Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
         		quiz.addQuestion(question);
         		System.out.println(q +" are added to the quiz");
-		    }
-		}
-		return 1;
+		    }*/
+		/*}
+		return 1;*/
     }
 
 
