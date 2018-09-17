@@ -278,24 +278,24 @@ public final class Solution {
         							quiz.addQuestion(question);
 
         						} else {
-        							System.out.println("error");
+        							System.out.println("Invalid penalty for <question text>");
         							return -1;
         						}
         						
         					} else {
-        						System.out.println("error");
+        						System.out.println("Invalid max marks for <question text>");
         						return -1;
         					}
         				} else {
-        					System.out.println("error");
+        					System.out.println("Error! Correct answer choice number is out of range for <question text>");
         					return -1;
         				}
         			}else{
-        				System.out.println("error");
+        				System.out.println("<question text> does not have enough answer choices");
         				return -1;
         			}
         		} else {
-        			System.out.println("error");
+        			System.out.println("“Error! Malformed question");
         			return -1;
         		}
 
@@ -303,7 +303,7 @@ public final class Solution {
         	}
         	return 1;
         } else {
-        	System.out.println("quiz doesnot have ");
+        	System.out.println("Quiz does not have questions");
         }
     	return 1;
 
