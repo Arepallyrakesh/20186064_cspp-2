@@ -318,7 +318,7 @@ public final class Solution {
         	Question question = quiz.getQuestion(i);
         	System.out.println(question.getQuestionText()+"("+question.getMaxMarks()+")");
         	for (int j = 0; j < question.getChoice().length - 1; j++) {
-        		System.out.println(question.getChoice()[j] + "\t");
+        		System.out.print(question.getChoice()[j] + "\t");
         		
         	}
         	System.out.println(question.getChoice()[question.getChoice().length - 1]);
