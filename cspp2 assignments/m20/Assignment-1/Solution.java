@@ -58,7 +58,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        return this.choices[getCorrectAnswer() - 1].equals(choice);
+        return choices[getCorrectAnswer() - 1].equals(choice);
     }
     /**
      * Gets the correct answer.
@@ -66,7 +66,7 @@ class Question {
      * @return     The correct answer.
      */
     public int getCorrectAnswer() {
-        return this.correctAnswer;
+        return correctAnswer;
     }
     /**
      * Gets the question text.
@@ -74,7 +74,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-    	return this.questiontext;
+    	return questiontext;
     }
     /**
      * Gets the choice.
@@ -82,7 +82,7 @@ class Question {
      * @return     The choice.
      */
     public String[] getChoice() {
-        return this.choices;
+        return choices;
     }
     /**
      * Gets the maximum marks.
@@ -90,7 +90,7 @@ class Question {
      * @return     The maximum marks.
      */
     public int getMaxMarks() {
-        return this.maxMarks;
+        return maxMarks;
     }
     /**
      * Gets the penalty.
@@ -98,7 +98,7 @@ class Question {
      * @return     The penalty.
      */
     public int getPenalty() {
-        return this.penalty;
+        return penalty;
     }
     /**
      * Sets the response.
@@ -263,7 +263,7 @@ public final class Solution {
     public static int loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) {
         // write your code here to read the questions from the console
-        System.out.println(q + " are added to the quiz");
+        /*System.out.println(q + " are added to the quiz");*/
         if (q > 0) {
         	for (int i = 0; i < q; i++) {
         		String[] tokens = scan.nextLine().split(":");
