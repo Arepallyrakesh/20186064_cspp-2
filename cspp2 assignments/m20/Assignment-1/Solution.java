@@ -336,7 +336,6 @@ public final class Solution {
         		
         	}
         	System.out.println(question.getChoice()[question.getChoice().length - 1]);
-        	System.out.println();
         	String response = scan.nextLine();
         	question.setResponse(response);
         }
