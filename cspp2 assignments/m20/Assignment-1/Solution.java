@@ -184,12 +184,15 @@ class Quiz {
         	System.out.println(getQuestion(i).getQuestionText());
         	if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
         		System.out.println("Wrong Answer! - Awarded:" + getQuestion(i).getMaxMarks());
+        		score += getQuestion(i).getMaxMarks(); 
         		
         	} else {
         		System.out.println("Wrong Answer! - Penalty:" + getQuestion(i).getPenalty());
+        		score += getQuestion(i).getMaxMarks(); 
         	}
         	
         }
+        System.out.println("Total Score:" + score);
     }
 
 }
@@ -344,5 +347,6 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        quiz.showReport();
     }
 }
