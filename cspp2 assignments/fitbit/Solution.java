@@ -1,33 +1,33 @@
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 class PhysicalActivities {
-	private String activityname;
+    private String activityname;
     private String date;
-	private String notes;
-	private String starttime;
-	private String endtime;
-	PhysicalActivities() {
+    private String notes;
+    private String starttime;
+    private String endtime;
+    PhysicalActivities() {
 
-	}
-	PhysicalActivities(String aname, String date1, String note, String stime, String etime) {
-		this.activityname = aname;
-		this.notes = note;
-		this.date = date1;
-		this.starttime = stime;
-		this.endtime = etime;
-	}
-	public String getNotes() {
-		return this.notes;
-	}
-	public String getActivityName() {
-		return activityname;
-	}public String getStartTime() {
-		return starttime;
-	}public String getEndTime() {
-		return endtime;
-	} public String getDate() {
-		return endtime;
-	}public void setActivityName(final String name) {
+    }
+    PhysicalActivities(String aname, String date1, String note, String stime, String etime) {
+        this.activityname = aname;
+        this.notes = note;
+        this.date = date1;
+        this.starttime = stime;
+        this.endtime = etime;
+    }
+    public String getNotes() {
+        return this.notes;
+    }
+    public String getActivityName() {
+        return activityname;
+    }public String getStartTime() {
+        return starttime;
+    }public String getEndTime() {
+        return endtime;
+    } public String getDate() {
+        return endtime;
+    }public void setActivityName(final String name) {
         this.activityname = name;
     }
 
@@ -49,7 +49,7 @@ class PhysicalActivities {
     public void setNotes(final String note) {
         this.notes = note;
     }
-	public String toString() {
+    public String toString() {
         String str = "PhysicalActivity" + "\n";
         str += "Name :" + getActivityName() + "\n";
         str += "Notes :" + getNotes() + "\n";
@@ -60,18 +60,18 @@ class PhysicalActivities {
     }
 }
 class WaterLog {
-	private String quantity;
-	private String date;
-	WaterLog(String quan, String dt) {
-		this.quantity = quan;
-		this.date = dt;
-	}
-	public String getQunatityw() {
-		return this.quantity;
-	}public String getDatew() {
-		return this.date;
-	}
-	public String toString() {
+    private String quantity;
+    private String date;
+    WaterLog(String quan, String dt) {
+        this.quantity = quan;
+        this.date = dt;
+    }
+    public String getQunatityw() {
+        return this.quantity;
+    }public String getDatew() {
+        return this.date;
+    }
+    public String toString() {
         String str = "Water" + "\n";
         str += "Date :" +getDatew() + "\n";
         str += "Quantity :" + getQunatityw() + "ml";
@@ -82,22 +82,22 @@ class WaterLog {
 }
 
 class SleepLog {
-	private String date;
-	private String starttime;
-	private String endtime;
-	SleepLog(String dt, String st, String et) {
-		this.date = dt;
-		this.starttime = st;
-		this.endtime = et;
-	}
-	public String getDateS() {
-		return this.date;
-	}public String getStartTimeS() {
-		return this.starttime;
-	}public String getEndTimeS() {
-		return this.endtime;
-	}
-	public String toString() {
+    private String date;
+    private String starttime;
+    private String endtime;
+    SleepLog(String dt, String st, String et) {
+        this.date = dt;
+        this.starttime = st;
+        this.endtime = et;
+    }
+    public String getDateS() {
+        return this.date;
+    }public String getStartTimeS() {
+        return this.starttime;
+    }public String getEndTimeS() {
+        return this.endtime;
+    }
+    public String toString() {
         String str = "Sleep" + "\n";
         str += "Date :" + getDateS() + "\n";
         str += "Starttime :" + getStartTimeS() + "\n";
@@ -106,73 +106,73 @@ class SleepLog {
     }
 }
 class Weightlog {
-	private String date;
-	private String time;
-	private String weight;
-	private String fat;
-	Weightlog(String dt, String tm, String wt, String fat1) {
-		this.date = dt;
-		this.weight = wt;
-		this.time = tm;
-		this.fat = fat1;
-	}
-	public String getDateW() {
-		return this.date;
-	}
+    private String date;
+    private String time;
+    private String weight;
+    private String fat;
+    Weightlog(String dt, String tm, String wt, String fat1) {
+        this.date = dt;
+        this.weight = wt;
+        this.time = tm;
+        this.fat = fat1;
+    }
+    public String getDateW() {
+        return this.date;
+    }
 
-	public String getTimeW() {
-		return this.time;
-	}
+    public String getTimeW() {
+        return this.time;
+    }
 
-	public String getWeight() {
-		return this.weight;
-	}
+    public String getWeight() {
+        return this.weight;
+    }
 
-	public String getFat() {
-		return this.fat;
-	}
-	public String toString() {
+    public String getFat() {
+        return this.fat;
+    }
+    public String toString() {
         String str = "Weight" + "\n";
-        str += "Date :" + getDateW() + "\n";
-        str += "Time :" + getTimeW() + "\n";
-        str += "Weight :" + getWeight() + "KG" + "\n";
-        str += "Fat :" + getFat();
+        str += "Date:" + getDateW() + "\n";
+        str += "Time:" + getTimeW() + "\n";
+        str += "Weight:" + getWeight() + "KG" + "\n";
+        str += "Fat:" + getFat();
         return str;
     }
 }
 class FoodLog {
-	private String item;
-	private int quantity;
-	private String date;
-	private String time;
-	FoodLog(final String name, final int quantity1, final String date1, String time1) {
-		this.item = name;
-		this.quantity = quantity1;
-		this.date = date1;
-		this.time = time1;
-	}
+    private String item;
+    private int quantity;
+    private String date;
+    private String time;
+    FoodLog(final String name, final int quantity1, final String date1, String time1) {
+        this.item = name;
+        this.quantity = quantity1;
+        this.date = date1;
+        this.time = time1;
+    }
 
-	public String getItem() {
-		return this.item;
-	}
+    public String getItem() {
+        return this.item;
+    }
 
-	public int getQuantity() {
-		return this.quantity;
-	}
+    public int getQuantity() {
+        return this.quantity;
+    }
 
-	public String getDate() {
-		return this.date;
-	}
+    public String getDate() {
+        return this.date;
+    }
 
-	public String getTime() {
-		return this.time;
-	}
-	public String toString() {
+    public String getTime() {
+        return this.time;
+    }
+    public String toString() {
         String str = "Food" + "\n";
-        str += "Date :" + getDate() + "\n";
-        str += "Time :" + getTime() + "\n";
-        str += "Name :" + getItem() + "\n";
-        str += "Quantity :" + getQuantity();
+        str += "Date:" + getDate() + "\n";
+        str += "Time:" + getTime() + "\n";
+        str += "Name:" + getItem() + "\n";
+        str += "Quantity:" + getQuantity();
         return str;
     }
 }
@@ -180,55 +180,55 @@ class FoodLog {
  * Class for fitbyte.
  */
 class Fitbyte {
-	private List<PhysicalActivities> pactivities;
-	private List<WaterLog> waterlog;
-	private List<FoodLog> foodlog;
-	private List<SleepLog> sleep;
-	private List<Weightlog> weight;
-	/**
+    private List<PhysicalActivities> pactivities;
+    private List<WaterLog> waterlog;
+    private List<FoodLog> foodlog;
+    private List<SleepLog> sleep;
+    private List<Weightlog> weight;
+    /**
      * Constructs the object.
      */
     Fitbyte() {
-    	pactivities = new List<PhysicalActivities>();
-    	waterlog = new List<WaterLog>();
-    	foodlog = new List<FoodLog>();
-    	sleep = new List<SleepLog>();
-    	weight = new List<Weightlog>();
+        pactivities = new List<PhysicalActivities>();
+        waterlog = new List<WaterLog>();
+        foodlog = new List<FoodLog>();
+        sleep = new List<SleepLog>();
+        weight = new List<Weightlog>();
     }
     public List<FoodLog> getFood() {
-    	return foodlog;
+        return foodlog;
     }
     public List<WaterLog> getWater() {
-    	return waterlog;
+        return waterlog;
     } 
     public List<PhysicalActivities> getPact() {
-    	return pactivities; 
+        return pactivities; 
     } 
     public List<SleepLog> getSleep() {
-    	return sleep;
+        return sleep;
     } 
     public List<Weightlog> getWeight() {
-    	return weight;
+        return weight;
     } 
     public void addFood(FoodLog item) {
-    	foodlog.add(item);
+        foodlog.add(item);
     }
     public void addWater(WaterLog water) {
-		waterlog.add(water);
-	}
+        waterlog.add(water);
+    }
 
-	public void addSleep(SleepLog sleep1) {
-		sleep.add(sleep1);
-	}
+    public void addSleep(SleepLog sleep1) {
+        sleep.add(sleep1);
+    }
 
-	public void addActivity(PhysicalActivities act) {
-		pactivities.add(act);
-	}
+    public void addActivity(PhysicalActivities act) {
+        pactivities.add(act);
+    }
 
-	public void addWeight(Weightlog weight1) {
-		weight.add(weight1);
-	}
-	public void getSummary() {
+    public void addWeight(Weightlog weight1) {
+        weight.add(weight1);
+    }
+    public void getSummary() {
         System.out.println(getFood());
         System.out.println(getWater());
         System.out.println(getPact());
@@ -269,7 +269,7 @@ class Fitbyte {
  * Class for solution.
  */
 class Solution{
-	 /**
+     /**
      * Constructs the object.
      */
     private Solution() {
@@ -286,16 +286,16 @@ class Solution{
         Fitbyte fit = new  Fitbyte();
 
         while (s.hasNext()) {
-        	String line = s.nextLine();
-	        /*System.out.println(tokens[0]);*/
-	        String[] tokens = line.split(" ");
-	        String[] cases = tokens[0].split(",");
-	        /*System.out.println(cases[0]);*/
-	        switch (cases[0]) {
-	        	case "Food":
-             	fit.addFood(new FoodLog(tokens[0],Integer.parseInt(tokens[1]),tokens[2],tokens[3]));
-	        	break;     
-	        	case "Water":
+            String line = s.nextLine();
+            /*System.out.println(tokens[0]);*/
+            String[] tokens = line.split(",");
+            String[] cases = tokens[0].split(" ");
+            /*System.out.println(cases[0]);*/
+            switch (cases[0]) {
+                case "Food":
+                fit.addFood(new FoodLog(tokens[0],Integer.parseInt(tokens[1]),tokens[2],tokens[3]));
+                break;     
+                case "Water":
                     fit.addWater(new WaterLog(tokens[0], tokens[1]));
                 break;
                 case "Sleep":
@@ -336,10 +336,10 @@ class Solution{
                 break;
 
 
-	        }
+            }
 
-	    }
-	}
+        }
+    }
 
 
 }
