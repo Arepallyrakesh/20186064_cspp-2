@@ -67,9 +67,10 @@ class Todoist {
 		
 	}
 	public String toString() {
-		String str="";
-		for(Task empty: tasklist) {
-			str+=empty;
+		String str = "";
+		for(Task empty : tasklist) {
+			str += empty;
+			str += "\n";
 		}
 		return str;
 	}
