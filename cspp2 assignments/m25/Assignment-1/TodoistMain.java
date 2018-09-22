@@ -59,6 +59,7 @@ class Todoist {
 	}
 	public Task[] getNextTask(String s, int a) {
 		return null;
+
 	}
 	public int totalTime4Completion() {
 		 /*int tt = 0;
@@ -67,8 +68,8 @@ class Todoist {
 		 		tt += list[i].timeToComplete;
 		 	}
 		 }
+		 System.out.println(list);*/
 
-*/
 		return 1;
 	}
 
@@ -84,6 +85,7 @@ class Todoist {
 		for(Task empty : list) {
 			str += empty;
 			str += "\n";
+			System.out.println(list);
 		}
 		return str;
 
