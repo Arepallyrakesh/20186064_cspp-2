@@ -11,7 +11,14 @@ class Task {
 	private boolean important;
 	private boolean urgent;
 	private String status;
-	Task(String title, String assign, int time, boolean imp, boolean urg, String sts) {
+	Task(String title, String assign, int time, boolean imp, boolean urg, String sts) throws Exception {
+		if(title.equals(""))
+			throw new Exception("Title not provided");
+		if(timeToComplete < 1)
+			throw new Exception("Invalid timeToComplete " + timeToComplete);
+		if(!(status.equals("todo") || status.equals("done"))) {
+			throw new Exception("Invalid status "+status);
+		}
 		this.title = title;
 		this.assignedTo = assign;
 		this.timeToComplete = time;
@@ -35,42 +42,8 @@ class Task {
 		}
 
 	}
-	/*public String tim(int tim) {
-		if (tim < 1) {
-			return "Invalid timeToComplete " + tim;
-		}
-		return null;
-	}
-	public String titl(String title) {
-		if (title == "") {
-			return "Title not provided";
-		}
-		return null;
-	}*/
-/*	public String sta(String sts) {
-		if (sts != "todo" || sts != "none") {
-			return "Invalid status "+ sts;
-		}else {
-			return sts;
-		}*/
-	
     public String toString() {
-    	if (title != "") {
-    		if (timeToComplete > 1) {
-    			if (status == "todo" || status == "done") {
-    				return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ (status);
-    			}else {
-    				return "Invalid status "+ status;
-    			}
-    			
-    		} else {
-    			return "Invalid timeToComplete "+ timeToComplete;  
-    		}
-    		
-    	} else {
-    		return "Title not provided";
-    	}
-    /*return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ sta(status);*/
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
  	}
 }
 class Todoist {
