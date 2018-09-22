@@ -22,18 +22,23 @@ class Task {
 		/*System.out.println(title + assign);*/
 
 	}
-	public String impt(boolean imp) {
+	public String impt(boolean imp, boolean urg) {
 
-		if (imp == true) {
+		if (imp == true && urg == true) {
 			return "Important, Urgent";
 			
-		}else {
+		}else if (imp == true && urg == false) {
+			return "Important, Not Urgent";
+		} else if (imp == false && urg == true) {
+			return "Not Important, Urgent";
+		} else {
 			return "Not Important, Not Urgent";
 		}
+
 	}
     public String toString() {
     
-    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important)+ ", "+ status;
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
  	}
 }
 class Todoist {
