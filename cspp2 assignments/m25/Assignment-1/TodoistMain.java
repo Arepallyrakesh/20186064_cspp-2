@@ -47,16 +47,30 @@ class Task {
 		}
 		return null;
 	}*/
-	public String sta(String sts) {
+/*	public String sta(String sts) {
 		if (sts != "todo" || sts != "none") {
 			return "Invalid status "+ sts;
 		}else {
 			return sts;
-		}
-	}
+		}*/
+	
     public String toString() {
-    
-    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ sta(status);
+    	if (title != "") {
+    		if (timeToComplete > 1) {
+    			if (status == "todo" || status == "done") {
+    				return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ (status);
+    			}else {
+    				return "Invalid status "+ status;
+    			}
+    			
+    		} else {
+    			return "Invalid timeToComplete "+ timeToComplete;  
+    		}
+    		
+    	} else {
+    		return "Title not provided";
+    	}
+    /*return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ sta(status);*/
  	}
 }
 class Todoist {
