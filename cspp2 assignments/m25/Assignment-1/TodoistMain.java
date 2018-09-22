@@ -35,7 +35,7 @@ class Task {
 		}
 
 	}
-	public String tim(int tim) {
+	/*public String tim(int tim) {
 		if (tim < 1) {
 			return "Invalid timeToComplete " + tim;
 		}
@@ -46,10 +46,10 @@ class Task {
 			return "Title not provided";
 		}
 		return null;
-	}
+	}*/
     public String toString() {
     
-    return titl(title) + ", " +assignedTo+ ", "+tim(timeToComplete)+ ", " +impt(important, urgent)+ ", "+ status;
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
  	}
 }
 class Todoist {
