@@ -15,9 +15,9 @@ class Task {
 		if(tle.equals(""))
 			throw new Exception("Title not provided");
 		if(time < 1)
-			throw new Exception("Invalid timeToComplete " + timeToComplete);
+			throw new Exception("Invalid timeToComplete " + time);
 		if(!(sts.equals("todo") || sts.equals("done"))) {
-			throw new Exception("Invalid status "+status);
+			throw new Exception("Invalid status "+sts);
 		}
 		this.title = tle;
 		this.assignedTo = assign;
