@@ -71,7 +71,7 @@ public class List<T> {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-        this.list = (T[])new Object[TEN];
+        this.list = (T[])new Object[100];
         this.size = 0;
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
