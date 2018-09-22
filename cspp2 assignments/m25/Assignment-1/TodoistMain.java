@@ -51,12 +51,13 @@ class Todoist {
 	ArrayList<Task> tasklist;
 	Todoist() {
 		tasklist= new ArrayList<Task>();
-
+		System.out.println(tasklist);
 	}
 	public Task[] getNextTask(String s, int a) {
 		return null;
 	}
 	public int totalTime4Completion() {
+
 		return 1;
 	}
 	public String getNextTask(String s) {
