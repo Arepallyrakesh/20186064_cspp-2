@@ -62,15 +62,15 @@ class Todoist {
 
 	}
 	public int totalTime4Completion() {
-		 /*int tt = 0;
-		 for (int i = 0; i< size(); i++) {
+		/*int tt = 0;
+		for (int i = 0; i< size(); i++) {
 		 	if (list[i].status.equals("todo")) {
-		 		tt += list[i].timeToComplete;
+		 		tt += list[i].get(i).timeToComplete;
 		 	}
 		 }
 		 System.out.println(list);*/
 
-		return 1;
+		return 0;
 	}
 
 	public String getNextTask(String s) {
