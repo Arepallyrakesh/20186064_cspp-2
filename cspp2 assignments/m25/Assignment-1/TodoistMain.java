@@ -32,6 +32,9 @@ class Task {
 	public int  getTime() {
         return this.timeToComplete;
     }
+    public String status() {
+    	return status;
+    }
 	public String impt(boolean imp, boolean urg) {
 
 		if (imp == true && urg == true) {
@@ -62,15 +65,15 @@ class Todoist {
 
 	}
 	public int totalTime4Completion() {
-		/*int tt = 0;
-		for (int i = 0; i< size(); i++) {
-		 	if (list[i].status.equals("todo")) {
-		 		tt += list[i].get(i).timeToComplete;
+		int tt = 0;
+		for (int i = 0; i < list.size(); i++) {
+		 	if (list.get(i).status().equals("todo")) {
+		 		tt += list.get(i).getTime();
 		 	}
 		 }
-		 System.out.println(list);*/
+		 //System.out.println(list);
 
-		return 0;
+		return tt;
 	}
 
 	public String getNextTask(String s) {
