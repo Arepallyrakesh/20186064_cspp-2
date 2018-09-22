@@ -18,20 +18,23 @@ class Task {
 		this.important = imp;
 		this.urgent = urg;
 		this.status = sts;
-		System.out.println(title + assign);
+		
+		/*System.out.println(title + assign);*/
 
 	}
+	public String impt(boolean imp) {
 
-    /*public String toString() {
-    // Replace the code below
-    String s = "[";
-    int i;
-    for (i = 0; i < size - 1; i++) {
-        s += list[i] + ", ";
-    }
-    s += list[i] + "]";
-    return s;*/
- 	/*}*/
+		if (imp == true) {
+			return "Important, urgent";
+			
+		}else {
+			return "Notimportant, Not urgent";
+		}
+	}
+    public String toString() {
+    
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important)+ ", "+ status;
+ 	}
 }
 class Todoist {
 	Todoist() {
