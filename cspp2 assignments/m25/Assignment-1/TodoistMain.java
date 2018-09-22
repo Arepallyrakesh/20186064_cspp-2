@@ -37,13 +37,15 @@ class Task {
 	}
 	public String tim(int tim) {
 		if (tim < 1) {
+			return "Invalid timeToComplete " + tim;
 		}
-		return "Invalid timeToComplete " + tim;
+		return null;
 	}
 	public String titl(String title) {
 		if (title == "") {
+			return "Title not provided";
 		}
-		return "Title not provided";
+		return null;
 	}
     public String toString() {
     
