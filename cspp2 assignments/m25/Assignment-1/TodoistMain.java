@@ -11,15 +11,15 @@ class Task {
 	private boolean important;
 	private boolean urgent;
 	private String status;
-	Task(String title, String assign, int time, boolean imp, boolean urg, String sts) throws Exception {
-		if(title.equals(""))
+	Task(String tle, String assign, int time, boolean imp, boolean urg, String sts) throws Exception {
+		if(tle.equals(""))
 			throw new Exception("Title not provided");
-		if(timeToComplete < 1)
+		if(time < 1)
 			throw new Exception("Invalid timeToComplete " + timeToComplete);
-		if(!(status.equals("todo") || status.equals("done"))) {
+		if(!(sts.equals("todo") || sts.equals("done"))) {
 			throw new Exception("Invalid status "+status);
 		}
-		this.title = title;
+		this.title = tle;
 		this.assignedTo = assign;
 		this.timeToComplete = time;
 		this.important = imp;
