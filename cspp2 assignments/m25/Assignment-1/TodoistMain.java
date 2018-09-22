@@ -25,10 +25,10 @@ class Task {
 	public String impt(boolean imp) {
 
 		if (imp == true) {
-			return "Important, urgent";
+			return "Important, Urgent";
 			
 		}else {
-			return "Notimportant, Not urgent";
+			return "Not Important, Not Urgent";
 		}
 	}
     public String toString() {
