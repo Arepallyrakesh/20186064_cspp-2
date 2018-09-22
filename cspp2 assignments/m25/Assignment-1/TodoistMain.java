@@ -19,7 +19,6 @@ class Task {
 		this.urgent = urg;
 		this.status = sts;
 		
-		/*System.out.println(title + assign);*/
 
 	}
 	public String impt(boolean imp, boolean urg) {
@@ -36,9 +35,19 @@ class Task {
 		}
 
 	}
+	public String tim(int tim) {
+		if (tim < 1) {
+		}
+		return "Invalid timeToComplete " + tim;
+	}
+	public String titl(String title) {
+		if (title == "") {
+		}
+		return "Title not provided";
+	}
     public String toString() {
     
-    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
+    return titl(title) + ", " +assignedTo+ ", "+tim(timeToComplete)+ ", " +impt(important, urgent)+ ", "+ status;
  	}
 }
 class Todoist {
