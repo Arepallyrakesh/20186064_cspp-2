@@ -47,9 +47,16 @@ class Task {
 		}
 		return null;
 	}*/
+	public String sta(String sts) {
+		if (sts != "todo" || sts != "none") {
+			return "Invalid status "+ sts;
+		}else {
+			return sts;
+		}
+	}
     public String toString() {
     
-    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ sta(status);
  	}
 }
 class Todoist {
