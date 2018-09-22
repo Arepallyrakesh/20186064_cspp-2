@@ -85,7 +85,7 @@ class Todoist {
 		for(Task empty : list) {
 			str += empty;
 			str += "\n";
-			System.out.println(list);
+			/*System.out.println(list);*/
 		}
 		return str;
 
