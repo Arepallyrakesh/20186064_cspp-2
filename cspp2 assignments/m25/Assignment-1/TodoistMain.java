@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.*;
 import java.util.Arrays;
 
 /**
@@ -47,7 +48,9 @@ class Task {
  	}
 }
 class Todoist {
+	ArrayList<Task> tasklist;
 	Todoist() {
+		tasklist= new ArrayList<Task>();
 
 	}
 	public Task[] getNextTask(String s, int a) {
@@ -60,7 +63,15 @@ class Todoist {
 		return null;
 	}
 	public void addTask(Task s) {
+		tasklist.add(s);
 		
+	}
+	public String toString() {
+		String str="";
+		for(Task empty: tasklist) {
+			str+=empty;
+		}
+		return str;
 	}
 }
 
