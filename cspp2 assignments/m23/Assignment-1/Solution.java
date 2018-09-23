@@ -42,7 +42,7 @@ class dotp {
         return product;
     }
 }
-class solution {
+class Solution {
     public static void main(String[] args) {
         plagiarism p = new plagiarism();
         HashMap<String, Integer> first = p.frequency("Test2/File3.txt");
